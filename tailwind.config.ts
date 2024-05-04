@@ -15,20 +15,31 @@ const config: Config = {
         "tertiary-dark": "#453f78",
         white: "#F1EEE9",
         "any-dark": "#13161F",
+        "disable-slate": "#8B8BA4",
       },
       fontFamily: {
         platypi: "Platypi",
         "one-day": "ONE DAY",
         "open-sans": ["Open Sans", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
       lineHeight: {
         "line-body": "140%",
       },
       letterSpacing: {
         body: "3%",
+        header2: "2%",
+        title: "10/100",
+        header3: "1%",
       },
     },
   },
+
+  variants: {
+    fill: ["hover", "focus"],
+    stroke: ["hover", "focus"],
+  },
+
   plugins: [flowbite.plugin()],
 };
 export default config;

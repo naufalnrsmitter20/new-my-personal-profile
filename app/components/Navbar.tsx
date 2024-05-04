@@ -43,12 +43,12 @@ export default function Navbars() {
   ];
   return (
     <React.Fragment>
-      <Navbar fluid rounded className="fixed w-full bg-primary-dark">
-        <Navbar.Brand href="#">
+      <Navbar fluid className="fixed w-full bg-primary-dark block z-40 shadow shadow-white hover:shadow-secondary-dark transition-all duration-200">
+        <Navbar.Brand href="#" className="ml-10">
           <Image src={logo} alt="my logo" />
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <SecondaryButton target="_blank" href={"https://wa.me/6282141341737"}>
+          <SecondaryButton target="_blank" href={"https://wa.me/6282141341737"} classname="mr-10">
             Contact Me
           </SecondaryButton>
           <Navbar.Toggle />
