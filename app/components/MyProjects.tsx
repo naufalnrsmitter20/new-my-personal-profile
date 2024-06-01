@@ -57,28 +57,29 @@ export default function MyProjects() {
 
   return (
     <React.Fragment>
-      <main id="project" className="bg-primary-dark px-36 pt-14 pb-40 h-full relative">
-        <div>
-          <span className="w-[209px] h-[209px] bg-secondary-dark rounded-full absolute -top-12 -left-14"></span>
-        </div>
-        <h1 className="uppercase relative z-10 font-one-day text-[64px] font-normal tracking-widest text-white">
+      <main id="project" className="bg-primary-dark px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
+        <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
           MY <span className="text-secondary-dark">PROJECTS</span>
         </h1>
         <div>
           <div className="mt-[93px] ">
-            <div className="flex justify-center gap-x-4">
+            <div className="flex-wrap flex justify-center gap-2 lg:gap-x-4">
               <FilteredButton onClick={() => handleCategory("All")}>All</FilteredButton>
               <FilteredButton onClick={() => handleCategory("Website Design")}>Web Design</FilteredButton>
               <FilteredButton onClick={() => handleCategory("UI/UX Design")}>UI/UX Design</FilteredButton>
               <FilteredButton onClick={() => handleCategory("WordPress")}>WordPress</FilteredButton>
               <FilteredButton onClick={() => handleCategory("Article")}>Article</FilteredButton>
             </div>
-            <div className="grid grid-cols-3 gap-4 mt-16 max-w-fit mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-16 max-w-fit mx-auto ">
               {filteredProjects.map((projects, i) => (
-                <Card key={i} className="bg-tertiary-dark/30 border-none rounded-2xl" renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover " alt="Project Image" />}>
-                  <div className="flex justify-between">
+                <Card
+                  key={i}
+                  className="bg-tertiary-dark/30 border-2 border-tertiary-dark ring-4 hover:border-secondary-dark ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 rounded-3xl"
+                  renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover " alt="Project Image" />}
+                >
+                  <div className="flex-wrap flex justify-between">
                     <a href={projects.href} target="_blank">
-                      <p className="font-bold hover:text-secondary-dark xtracking-wide font-lato text-white">{projects.name}</p>
+                      <p className="font-bold hover:text-secondary-dark tracking-wide font-lato group text-white">{projects.name}</p>
                     </a>
                     <p className="font-bold text-disable-slate font-lato">{projects.type}</p>
                   </div>

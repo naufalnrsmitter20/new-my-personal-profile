@@ -3,7 +3,7 @@
 import React from "react";
 import { Button, Navbar } from "flowbite-react";
 import Image from "next/image";
-import logo from "@/public/img/DevNavPreneur.png";
+import logo from "@/public/img/favicon.png";
 import { SecondaryButton } from "./utilities/Button";
 
 interface navLink {
@@ -43,12 +43,15 @@ export default function Navbars() {
   ];
   return (
     <React.Fragment>
-      <Navbar fluid className="fixed w-full bg-primary-dark block z-40 shadow shadow-white hover:shadow-secondary-dark transition-all duration-200">
-        <Navbar.Brand href="#" className="ml-10">
+      <Navbar className="fixed w-full bg-primary-dark block z-40 shadow shadow-white hover:shadow-secondary-dark transition-all duration-200">
+        <Navbar.Brand href="#" className="flex place-items-center gap-x-2">
           <Image src={logo} alt="my logo" />
+          <h2 className="font-platypi font-semibold text-[24px] tracking-wide text-secondary-dark">
+            DevN <span className="text-white">Naufalnr</span>
+          </h2>
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <SecondaryButton target="_blank" href={"https://wa.me/6282141341737"} classname="mr-10">
+          <SecondaryButton target="_blank" href={"https://wa.me/6282141341737"} classname=" hidden lg:block">
             Contact Me
           </SecondaryButton>
           <Navbar.Toggle />

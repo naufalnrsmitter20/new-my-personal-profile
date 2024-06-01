@@ -4,16 +4,16 @@ import { FourtyButton, SecondaryButton, TertiaryButton } from "./utilities/Butto
 import { Label, Spinner, Textarea, TextInput } from "flowbite-react";
 import type { CustomFlowbiteTheme } from "flowbite-react";
 import { useRouter } from "next/navigation";
-import Toaster from "./utilities/Toaster";
 import { FaTelegramPlane } from "react-icons/fa";
 import SpinnerProops from "./utilities/Spinner";
+import toast, { Toaster } from "react-hot-toast";
 
 const customTheme: CustomFlowbiteTheme["textInput"] = {
   field: {
     input: {
       colors: {
-        any: "bg-any-dark border-2 focus:outline-none focus:ring-2 ring-tertiary-dark border-tertiary-dark",
-        gray: "border-gray-300 border-2 bg-any-dark border-tertiary-dark text-white focus:ring-4 focus:border-white focus:ring-white/20 shadow-sm shadow-white",
+        any: "bg-any-dark border-2  focus:outline-none focus:ring-2 ring-tertiary-dark border-tertiary-dark",
+        gray: "border-gray-300 border-2 ring-4 ring-tertiary-dark/40 bg-any-dark border-tertiary-dark text-white focus:ring-4 focus:border-white focus:ring-white/20 shadow-sm shadow-white",
       },
     },
   },
@@ -21,7 +21,7 @@ const customTheme: CustomFlowbiteTheme["textInput"] = {
 
 const customTheme2: CustomFlowbiteTheme["textarea"] = {
   colors: {
-    gray: "border-gray-300 border-2 shadow-sm shadow-white bg-any-dark border-tertiary-dark text-white focus:ring-4 focus:border-white focus:ring-white/20",
+    gray: "border-gray-300 border-2 ring-4 ring-tertiary-dark/40 shadow-sm shadow-white bg-any-dark border-tertiary-dark text-white focus:ring-4 focus:border-white focus:ring-white/20",
   },
 };
 export default function Comment() {
@@ -31,6 +31,7 @@ export default function Comment() {
   const [isVisible, setIsVisible] = useState(false);
   const [isMutating, setIsMutating] = useState(false);
   const [toasts, setToasts] = useState(false);
+
   const router = useRouter();
   const handleClick = () => {
     setIsVisible(!isVisible);
@@ -52,6 +53,8 @@ export default function Comment() {
       console.log("Success!", response);
       setIsMutating(false);
       setToasts(true);
+      toast.success("Komentar anda terkirim!");
+
       router.refresh();
     } catch (error) {
       console.error("Errorr! ", (error as Error).message);
@@ -59,11 +62,11 @@ export default function Comment() {
   };
   return (
     <React.Fragment>
-      <main id="comments" className="bg-any-dark px-36 pt-14 pb-40 h-full relative">
-        <h1 className="uppercase relative z-10 font-one-day text-[64px] font-normal tracking-widest text-tertiary-dark">
+      <main id="comments" className="bg-any-dark px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
+        <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-tertiary-dark">
           INTEREST <span className="text-white">WITH ME?</span>
         </h1>
-        <h1 className="uppercase relative z-10 font-one-day text-[64px] font-normal tracking-widest text-white">
+        <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
           GIVE YOUR <span className="text-secondary-dark">COMMENTS</span>
         </h1>
         <div className="flex justify-start gap-x-4 mt-10">
@@ -102,12 +105,12 @@ export default function Comment() {
                 required
               />
             </div>
-            <FourtyButton type="submit" classname=" group mt-10">
+            <FourtyButton type="submit" classname="group mt-10">
               {!isMutating ? (
                 <>
-                  <p>SENT COMMENTS</p>
+                  <p className="text-white mt-1">SENT COMMENTS</p>
                   <svg
-                    className="w-6 h-6 text-tertiary-dark pb-1 group-hover:text-white active:text-primary-dark active:hover:text-primary-dark transition-all duration-200"
+                    className="w-6 h-6 text-white pb-1 group-hover:text-white active:text-primary-dark active:hover:text-primary-dark transition-all duration-200"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -127,7 +130,7 @@ export default function Comment() {
             </FourtyButton>
           </form>
         )}
-        {toasts && <Toaster type={<FaTelegramPlane className="h5 w-5" />} message="Komentar Anda Terkirim" />}
+        <Toaster />
       </main>
     </React.Fragment>
   );

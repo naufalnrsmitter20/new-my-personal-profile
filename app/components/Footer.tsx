@@ -66,7 +66,7 @@ export default function Footers() {
         </div>
       </Footer>
       <div className="w-full relative z-10 bottom-0 mix-blend-exclusion text-start bg-any-dark px-4 py-6">
-        <Footer.Copyright className="text-white w-full max-w-screen-xl text-start mx-auto" href="#" by="DevNaf™" year={2024} />
+        <Footer.Copyright className="text-white w-full max-w-screen-xl text-start mx-auto" href="#" by="DevN Naufalnr" year={2024} />
       </div>
     </React.Fragment>
   );

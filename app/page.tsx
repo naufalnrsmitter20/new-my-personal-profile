@@ -10,7 +10,7 @@ import TechStack from "./components/TechStack";
 
 export default function Home() {
   return (
-    <main className="bg-primary-dark w-screen h-full">
+    <main className="bg-primary-dark w-full h-full">
       <Navbars />
       <Jumbotron />
       <AboutMe />

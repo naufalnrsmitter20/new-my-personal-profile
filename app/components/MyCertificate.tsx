@@ -63,21 +63,25 @@ export default function MyCertificate() {
       title: "Webinar 1",
     },
     {
+      imageURL: bionix,
+      title: "Bionix",
+    },
+    {
       imageURL: OSISMts,
       title: "OSIS MATSANEWA - KETUA 1",
     },
   ];
   return (
     <React.Fragment>
-      <main id="certificate" className="bg-primary-dark px-36 pt-14 pb-40 h-full relative">
-        <h1 className="uppercase relative z-10 font-one-day text-[64px] font-normal tracking-widest text-secondary-dark">
+      <main id="certificate" className="bg-primary-dark px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
+        <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">
           MY <span className="text-white">CERTIFICATE</span>
         </h1>
-        <div className="sm:h-64 xl:h-80 w-[966px] h-56 2xl:h-[684px] mx-auto mt-[93px] relative">
-          <Carousel slideInterval={3000}>
+        <div className="sm:h-64 xl:h-80 w-auto xl:w-[966px] h-56 2xl:h-[684px] mx-auto mt-[93px] relative">
+          <Carousel className="max-w-sm sm:max-w-lg lg:max-w-xl xl:max-w-6xl ring-white/40 border-2 border-white ring-2 rounded-lg" slideInterval={3000}>
             {certif.map((items, i) => (
-              <div key={i}>
-                <Image src={items.imageURL} width={966} height={684} alt={items.title} />
+              <div className="" key={i}>
+                <Image src={items.imageURL} width={966} height={684} alt={items.title} className="" />
               </div>
             ))}
           </Carousel>
