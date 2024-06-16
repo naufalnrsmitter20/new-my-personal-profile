@@ -74,19 +74,19 @@ export default function MyProjects() {
         <div>
           <div className="mt-[93px]">
             <div className="flex-wrap flex justify-center gap-2 lg:gap-x-4">
-              <div data-aos-duration="1500" data-aos-delay="1000" data-aos-offset="100" data-aos="fade-right">
+              <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-right">
                 <FilteredButton onClick={() => handleCategory("All")}>All</FilteredButton>
               </div>
-              <div data-aos-duration="1500" data-aos-offset="100" data-aos-delay="1000" data-aos="fade-up">
+              <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-up">
                 <FilteredButton onClick={() => handleCategory("Website")}>Website</FilteredButton>
               </div>
-              <div data-aos-duration="1500" data-aos-offset="100" data-aos-delay="1000" data-aos="fade-down">
+              <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-down">
                 <FilteredButton onClick={() => handleCategory("UI/UX Design")}>UI/UX Design</FilteredButton>
               </div>
-              <div data-aos-duration="1500" data-aos-offset="100" data-aos-delay="1000" data-aos="fade-up">
+              <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-up">
                 <FilteredButton onClick={() => handleCategory("WordPress")}>WordPress</FilteredButton>
               </div>
-              <div data-aos-duration="1500" data-aos-offset="100" data-aos-delay="1000" data-aos="fade-left">
+              <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-left">
                 <FilteredButton onClick={() => handleCategory("Article")}>Article</FilteredButton>
               </div>
             </div>
@@ -95,9 +95,8 @@ export default function MyProjects() {
                 <Card
                   key={i}
                   data-aos="fade-left"
-                  data-aos-offset={100}
                   data-aos-duration={2000}
-                  data-aos-delay={i * 100}
+                  data-aos-delay={i * 500}
                   className="bg-tertiary-dark/30 border-2 border-tertiary-dark ring-4 hover:border-secondary-dark ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 rounded-3xl z-10"
                   renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover rounded-3xl" alt="Project Image" />}
                 >

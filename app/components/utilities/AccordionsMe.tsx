@@ -12,7 +12,7 @@ export default function AccordionsMe() {
   const targetRef = useRef(null);
 
   return (
-    <main ref={targetRef} data-aos="fade-left" data-offset="300" data-aos-duration="1400" className="lg:ml-24 w-full lg:mr-16 ">
+    <main ref={targetRef} data-aos="fade-left" data-aos-duration="1000" className="lg:ml-24 w-full lg:mr-16 ">
       <Accordion>
         <Accordion.Panel>
           <Accordion.Title className="font-open-sans focus:ring-2 font-normal xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] tracking-wider bg-transparent text-tertiary-dark py-6 hover:bg-transparent">
