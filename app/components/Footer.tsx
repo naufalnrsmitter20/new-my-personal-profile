@@ -2,6 +2,7 @@ import { Footer } from "flowbite-react";
 import React from "react";
 import logo from "@/public/img/DevNavPreneur.png";
 import Image from "next/image";
+import InitialAOSClient from "./utilities/InitialAOSClient";
 
 interface Build {
   tools: string;
@@ -35,14 +36,14 @@ export default function Footers() {
     },
   ];
   return (
-    <React.Fragment>
+    <InitialAOSClient>
       <Footer container className="relative bottom-0 bg-any-dark">
-        <div className="w-full max-w-full px-28 mx-auto mt-5 mb-16">
+        <div className="w-full max-w-full lg:px-28 mx-auto mt-5 mb-16">
           <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
             <div>
               <Image src={logo} alt="Logo" />
             </div>
-            <div className="grid grid-cols-2 sm:mt-4 gap-x-44">
+            <div className="grid grid-cols-2 mt-10 sm:mt-4 gap-x-44">
               <div className="">
                 <Footer.Title title="Build With" className="font-platypi text-[24px] font-medium capitalize text-white" />
                 {builder.map((build, i) => (
@@ -68,6 +69,6 @@ export default function Footers() {
       <div className="w-full relative z-10 bottom-0 mix-blend-exclusion text-start bg-any-dark px-4 py-6">
         <Footer.Copyright className="text-white w-full max-w-screen-xl text-start mx-auto" href="#" by="DevN Naufalnr" year={2024} />
       </div>
-    </React.Fragment>
+    </InitialAOSClient>
   );
 }

@@ -14,6 +14,8 @@ import webDesign from "@/public/img/certificate/Naufal Nabil Ramadhan_page-0001.
 import webinar1 from "@/public/img/certificate/Sertifikat Webinar -Naufal-Nabil-Ramadhan.jpg";
 import OSISMts from "@/public/img/certificate/SKMBT_C28023080613030_page-0001.jpg";
 import Image from "next/image";
+import InitialAOSClient from "./utilities/InitialAOSClient";
+import MouseBackground from "./animation/MouseBackground";
 
 interface data {
   imageURL: any;
@@ -72,21 +74,23 @@ export default function MyCertificate() {
     },
   ];
   return (
-    <React.Fragment>
-      <main id="certificate" className="bg-primary-dark px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
-        <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">
+    <InitialAOSClient>
+      <MouseBackground />
+
+      <main id="certificate" className="bg-primary-dark/5 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative selection:bg-slate-900">
+        <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">
           MY <span className="text-white">CERTIFICATE</span>
         </h1>
         <div className="sm:h-64 xl:h-80 w-auto xl:w-[966px] h-56 2xl:h-[684px] mx-auto mt-[93px] relative">
-          <Carousel className="max-w-sm sm:max-w-lg lg:max-w-xl xl:max-w-6xl ring-white/40 border-2 border-white ring-2 rounded-lg" slideInterval={3000}>
+          <Carousel className="max-w-sm sm:max-w-lg lg:max-w-xl group xl:max-w-6xl ring-white/40 border-2 border-white ring-2 hover:ring-8 transition-all duration-200 rounded-lg" slideInterval={3000}>
             {certif.map((items, i) => (
-              <div className="" key={i}>
-                <Image src={items.imageURL} width={966} height={684} alt={items.title} className="" />
+              <div key={i}>
+                <Image src={items.imageURL} width={966} height={684} alt={items.title} className="group-hover:scale-90 transition-all duration-300 rounded-md" />
               </div>
             ))}
           </Carousel>
         </div>
       </main>
-    </React.Fragment>
+    </InitialAOSClient>
   );
 }

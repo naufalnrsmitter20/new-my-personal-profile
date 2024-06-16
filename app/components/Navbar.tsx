@@ -5,6 +5,7 @@ import { Button, Navbar } from "flowbite-react";
 import Image from "next/image";
 import logo from "@/public/img/favicon.png";
 import { SecondaryButton } from "./utilities/Button";
+import InitialAOSClient from "./utilities/InitialAOSClient";
 
 interface navLink {
   title: string;
@@ -42,7 +43,7 @@ export default function Navbars() {
     },
   ];
   return (
-    <React.Fragment>
+    <InitialAOSClient>
       <Navbar className="fixed w-full bg-primary-dark block z-40 shadow shadow-white hover:shadow-secondary-dark transition-all duration-200">
         <Navbar.Brand href="#" className="flex place-items-center gap-x-2">
           <Image src={logo} alt="my logo" />
@@ -64,6 +65,6 @@ export default function Navbars() {
           ))}
         </Navbar.Collapse>
       </Navbar>
-    </React.Fragment>
+    </InitialAOSClient>
   );
 }

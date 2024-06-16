@@ -18,6 +18,7 @@ import { Card } from "flowbite-react";
 import Image from "next/image";
 import { TertiaryButton } from "./utilities/Button";
 import Link from "next/link";
+import InitialAOSClient from "./utilities/InitialAOSClient";
 
 interface tech {
   imageURL: any;
@@ -88,12 +89,6 @@ export default function TechStack() {
       description: "",
       href: "https://sass-lang.com/",
     },
-    // {
-    //   imageURL: reactJsImage,
-    //   title: "React JS",
-    //   description: "",
-    //   href: "https://reactjs.org/",
-    // },
     {
       imageURL: nextJsImage,
       title: "Next JS",
@@ -120,28 +115,26 @@ export default function TechStack() {
     },
   ];
   return (
-    <React.Fragment>
+    <InitialAOSClient>
       <main id="techstack" className="bg-any-dark md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
-        <h1 className="uppercase relative z-10 px-12 md:px-0 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
+        <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative z-10 px-12 md:px-0 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
           TECH <span className="text-tertiary-dark">STACK</span>
         </h1>
         <div className="mt-[93px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-fit gap-4 mx-auto">
           {techStacks.map((tech, i) => (
             <Link key={i} target="_blank" href={tech.href}>
               <Card
-                className="bg-transparent border-2 border-tertiary-dark hover:border-white w-[300px] xl:w-[300px] transition-all duration-200"
+                data-aos="fade-up"
+                data-aos-offset={100}
+                data-aos-duration={1500}
+                data-aos-delay={i * 100}
+                className="bg-transparent border-2 border-tertiary-dark hover:border-white w-[300px] hover:ring-4 hover:ring-white/40 xl:w-[300px] transition-all duration-200"
                 renderImage={() => <Image width={233} height={142} className="mx-auto mt-10 object-cover" src={tech.imageURL} alt="TechStack" />}
-              >
-                {/* <h5 className="text-[24px] font-normal font-open-sans tracking-normal text-white">{tech.title}</h5>
-              <p className="font-normal font-open-sans text-[16px] tracking-wide text-white">{tech.description}</p> */}
-                {/* <TertiaryButton classname="capitalize tracking-wider w-fit" href={tech.href} target="_blank">
-                Documentation
-              </TertiaryButton> */}
-              </Card>
+              ></Card>
             </Link>
           ))}
         </div>
       </main>
-    </React.Fragment>
+    </InitialAOSClient>
   );
 }

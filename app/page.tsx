@@ -1,4 +1,6 @@
 import AboutMe from "./components/AboutMe";
+import LazyScroll from "./components/animation/LazyScroll";
+import SmoothScroll from "./components/animation/SmoothScroll";
 import Comment from "./components/Comment";
 import Footers from "./components/Footer";
 import Jumbotron from "./components/Jumbotron";
@@ -11,15 +13,19 @@ import TechStack from "./components/TechStack";
 export default function Home() {
   return (
     <main className="bg-primary-dark w-full h-full">
-      <Navbars />
-      <Jumbotron />
-      <AboutMe />
-      <MyProjects />
-      <TechStack />
-      <MyCertificate />
-      <Comment />
-      <Services />
-      <Footers />
+      {/* <LazyScroll> */}
+      <SmoothScroll>
+        <Navbars />
+        <Jumbotron />
+        <AboutMe />
+        <MyProjects />
+        <TechStack />
+        <MyCertificate />
+        <Comment />
+        <Services />
+        <Footers />
+      </SmoothScroll>
+      {/* </LazyScroll> */}
     </main>
   );
 }

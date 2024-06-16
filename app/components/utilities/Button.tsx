@@ -1,5 +1,8 @@
+import { AosEvent, AosEventType } from "aos";
 import type { CustomFlowbiteTheme } from "flowbite-react";
 import { Button } from "flowbite-react";
+import AOS from "aos";
+import { useEffect } from "react";
 
 interface ButtonProops {
   href?: string;

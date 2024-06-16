@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { FaTelegramPlane } from "react-icons/fa";
 import SpinnerProops from "./utilities/Spinner";
 import toast, { Toaster } from "react-hot-toast";
+import InitialAOSClient from "./utilities/InitialAOSClient";
 
 const customTheme: CustomFlowbiteTheme["textInput"] = {
   field: {
@@ -61,15 +62,33 @@ export default function Comment() {
     }
   };
   return (
-    <React.Fragment>
+    <InitialAOSClient>
       <main id="comments" className="bg-any-dark px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
-        <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-tertiary-dark">
-          INTEREST <span className="text-white">WITH ME?</span>
+        <h1 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-tertiary-dark">
+          INTEREST{" "}
+          <span data-aos="fade-down" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="500" className="inline-block text-white">
+            WITH
+          </span>{" "}
+          <span data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="1000" className="text-white inline-block">
+            ME?
+          </span>
         </h1>
-        <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
-          GIVE YOUR <span className="text-secondary-dark">COMMENTS</span>
+        <h1
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+          className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white"
+        >
+          GIVE{" "}
+          <span data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="1000" className="inline-block">
+            YOUR
+          </span>{" "}
+          <span data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="1500" className="text-secondary-dark inline-block">
+            COMMENTS
+          </span>
         </h1>
-        <div className="flex justify-start gap-x-4 mt-10">
+        <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="1000" className="flex justify-start gap-x-4 mt-10">
           <SecondaryButton onClick={handleClick} classname="px-2 py-2">
             ADD COMMENTS
           </SecondaryButton>
@@ -132,6 +151,6 @@ export default function Comment() {
         )}
         <Toaster />
       </main>
-    </React.Fragment>
+    </InitialAOSClient>
   );
 }

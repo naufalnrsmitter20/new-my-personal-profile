@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "aos": "^3.0.0-beta.6",
     "flowbite-react": "^0.8.0",
+    "framer-motion": "^11.2.10",
+    "gsap": "^3.12.5",
     "next": "14.2.1",
+    "next-video": "^1.0.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "react-typed": "^2.0.12",
+    "split-type": "^0.3.4"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
