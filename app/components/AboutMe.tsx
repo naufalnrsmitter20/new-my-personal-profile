@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import myProfile from "@/public/img/my-profile.png";
+import myProfile from "@/public/foto2ku.jpg";
 import AccordionsMe from "./utilities/AccordionsMe";
 import InitialAOSClient from "./utilities/InitialAOSClient";
 
@@ -12,7 +12,7 @@ export default function AboutMe() {
           ABOUT <span className="text-white">ME</span>
         </h1>
         <div className="mt-[93px] lg:flex lg:justify-between pb-20">
-          <Image data-aos="fade-right" data-offset="300" data-aos-duration="1400" className="mx-auto lg:mx-0 object-cover mb-10 ring-2 ring-white rounded-md" src={myProfile} alt="Profiles" />
+          <Image data-aos="fade-right" data-offset="300" data-aos-duration="1400" className="mx-auto lg:mx-0 object-cover mb-10 ring-2 ring-white rounded-md h-72 w-72" src={myProfile} alt="Profiles" />
           <AccordionsMe />
         </div>
       </main>
