@@ -64,15 +64,36 @@ export default function Services() {
         </div>
         <div className="mt-36">
           <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] text-end font-normal tracking-widest text-secondary-dark">
-            INTERESTED <span className="text-white">WITH THE</span> <span className="text-tertiary-dark">SERVICES</span>
+            <span className="inline-block" data-aos="fade-down" data-aos-duration="1000">
+              INTERESTED
+            </span>{" "}
+            <span data-aos="fade-right" data-aos-delay="1000" data-aos-duration="500" className="text-white inline-block">
+              WITH{" "}
+              <span className="inline-block" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+                THE
+              </span>
+            </span>{" "}
+            <span className="text-tertiary-dark inline-block" data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000">
+              SERVICES
+            </span>
           </h1>
           <h1 className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] text-end font-normal tracking-widest text-tertiary-dark">
-            PROVIDED <span className="text-white">TO</span> <span className="text-secondary-dark">YOU?</span>
+            <span className="inline-block" data-aos="fade-left" data-aos-delay="2000" data-aos-duration="1000">
+              PROVIDED
+            </span>{" "}
+            <span className="text-white inline-block" data-aos="fade-left" data-aos-delay="2500" data-aos-duration="1000">
+              TO
+            </span>{" "}
+            <span className="text-secondary-dark inline-block" data-aos="fade-left" data-aos-delay="3000" data-aos-duration="1000">
+              YOU?
+            </span>
           </h1>
-          <div className="flex justify-end mt-6">
-            <SecondaryButton href="https://wa.me/6282141341737/" target="_blank" classname="px-6">
-              CONTACT ME
-            </SecondaryButton>
+          <div>
+            <div className="flex justify-end mt-6" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1000">
+              <SecondaryButton href="https://wa.me/6282141341737/" target="_blank" classname="px-6">
+                CONTACT ME
+              </SecondaryButton>
+            </div>
           </div>
         </div>
       </main>

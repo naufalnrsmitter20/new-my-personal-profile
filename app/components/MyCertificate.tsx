@@ -81,8 +81,8 @@ export default function MyCertificate() {
         <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">
           MY <span className="text-white">CERTIFICATE</span>
         </h1>
-        <div className="sm:h-64 xl:h-80 w-auto xl:w-[966px] h-56 2xl:h-[684px] mx-auto mt-[93px] relative">
-          <Carousel className="max-w-sm sm:max-w-lg lg:max-w-xl group xl:max-w-6xl ring-white/40 border-2 border-white ring-2 hover:ring-8 transition-all duration-200 rounded-lg" slideInterval={3000}>
+        <div className="sm:h-80 xl:h-[580px] w-auto md:h-80 lg:h-96 xl:w-[966px] h-56 2xl:h-[684px] mx-auto mt-[93px] relative">
+          <Carousel className="max-w-sm sm:max-w-lg lg:max-w-xl group xl:max-w-6xl ring-white/40 border-2 border-white ring-2 hover:ring-8 transition-all duration-200 rounded-lg h-full" slideInterval={3000}>
             {certif.map((items, i) => (
               <div key={i}>
                 <Image src={items.imageURL} width={966} height={684} alt={items.title} className="group-hover:scale-90 transition-all duration-300 rounded-md" />

@@ -43,7 +43,7 @@ export default function Footers() {
             <div>
               <Image src={logo} alt="Logo" />
             </div>
-            <div className="grid grid-cols-2 mt-10 sm:mt-4 gap-x-44">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-10 sm:mt-4 gap-x-44">
               <div className="">
                 <Footer.Title title="Build With" className="font-platypi text-[24px] font-medium capitalize text-white" />
                 {builder.map((build, i) => (
@@ -55,7 +55,7 @@ export default function Footers() {
                 ))}
               </div>
               <div>
-                <Footer.Title title="Legal" className="font-platypi text-[24px] font-medium capitalize text-white" />
+                <Footer.Title title="Legal" className="font-platypi text-[24px] font-medium capitalize text-white mt-10 md:mt-0" />
                 <Footer.LinkGroup col>
                   <Footer.Link href="#" className="text-white font-open-sans font-medium text-[16px] leading-line-body py-1.5 hover:text-secondary-dark transition-all duration-200">
                     Privacy Policy

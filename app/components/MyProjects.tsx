@@ -34,7 +34,7 @@ export default function MyProjects() {
       href: "https://lansicare-health.vercel.app/",
     },
     {
-      name: "Album Kenangan Fyrtiokara",
+      name: "Album Fyrtiokara",
       imageUrl: AlbumKenangan,
       type: "WordPress",
       href: "https://fyrtiokara.wordpress.com/",
@@ -78,7 +78,7 @@ export default function MyProjects() {
                 <FilteredButton onClick={() => handleCategory("All")}>All</FilteredButton>
               </div>
               <div data-aos-duration="1500" data-aos-offset="100" data-aos="fade-up">
-                <FilteredButton onClick={() => handleCategory("Website")}>Webwite</FilteredButton>
+                <FilteredButton onClick={() => handleCategory("Website")}>Website</FilteredButton>
               </div>
               <div data-aos-duration="1500" data-aos-offset="100" data-aos="fade-down">
                 <FilteredButton onClick={() => handleCategory("UI/UX Design")}>UI/UX Design</FilteredButton>
@@ -103,9 +103,9 @@ export default function MyProjects() {
                 >
                   <div className="flex-wrap flex justify-between">
                     <a href={projects.href} target="_blank">
-                      <p className="font-bold hover:text-secondary-dark tracking-wide font-lato group text-white">{projects.name}</p>
+                      <p className="font-bold hover:text-secondary-dark xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] tracking-wide font-lato group text-white">{projects.name}</p>
                     </a>
-                    <p className="font-bold text-disable-slate font-lato">{projects.type}</p>
+                    <p className="font-bold text-disable-slate xl:text-[16px] lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] font-lato">{projects.type}</p>
                   </div>
                 </Card>
               ))}

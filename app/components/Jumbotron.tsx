@@ -57,14 +57,21 @@ export default function Jumbotron() {
   return (
     <InitialAOSClient>
       <main id="home" className="relative selection:bg-slate-900">
-        <video className="w-full h-screen absolute top-0 left-0 object-cover" preload="none" autoPlay loop muted>
+        <video className="w-full h-full absolute top-0 left-0 object-cover lg:h-screen" preload="none" autoPlay loop muted>
           <source src="/videos/myVideoBG.mp4" type="video/mp4" />
         </video>
-        <div className="w-full h-screen absolute top-0 left-0 bg-black/50 z-10"></div>
-        <main className="relative lg:flex flex-wrap-reverse lg:place-items-center w-full h-screen justify-around overflow-hidden z-20">
+        <div className="w-full h-full absolute top-0 left-0 bg-black/50 z-10 lg:h-screen"></div>
+        <main className="relative lg:flex flex-wrap-reverse lg:place-items-center w-full h-full lg:h-screen justify-around overflow-hidden z-20">
           <div className="max-w-xl mx-12 lg:mx-0 mb-16 lg:mt-0">
             <div>
-              <Image src={naufal} alt="my Photos" className="w-32 lg:hidden mx-auto my-10 md:block lg:w-auto ring-4 border-2 border-white ring-white/40 rounded-lg" />
+              <Image
+                src={naufal}
+                data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                alt="my Photos"
+                className="w-32 lg:hidden lg:mx-auto my-10 md:block lg:w-auto ring-4 border-2 border-white ring-white/40 rounded-lg animate-move-up-down duration-[2s]"
+              />
             </div>
             <div ref={targetRef} className="mt-10 lg:text-left">
               {/* <div className="flex-grow flex gap-x-2"> */}
@@ -89,12 +96,12 @@ export default function Jumbotron() {
                 </span>
               </h6>
             </div>
-            <div className="lg:flex grid grid-cols-4 sm:grid-cols-6 gap-3 justify-start lg:gap-x-3.5 mt-6 md:grid-cols-7">
+            <div className="flex flex-wrap gap-x-4 gap-y-4 justify-start mt-4">
               {Icons.map((e, i) => (
                 <Link
                   key={i}
                   target="_blank"
-                  className="group mx-auto lg:mx-0 ring-secondary-dark/40 ring-2 hover:border-white focus:border-white outline-none border-2 active:border-white focus:ring-white focus:ring-4 flex place-items-center p-2 rounded-full border-secondary-dark transition-all duration-200"
+                  className="group lg:mx-0 ring-secondary-dark/40 ring-2 hover:border-white focus:border-white outline-none border-2 active:border-white focus:ring-white focus:ring-4 flex place-items-center p-1 lg:p-1.5 xl:p-2 rounded-full border-secondary-dark transition-all duration-200 "
                   href={e.URL}
                   data-aos="fade-left"
                   data-aos-duration="1500"
@@ -117,7 +124,7 @@ export default function Jumbotron() {
               data-aos-duration="1000"
               src={naufal}
               alt="my Photos"
-              className="z-40 w-32 hidden lg:inline-block lg:w-auto lg:mt-0 ring-4 border-2 border-white ring-white/40 rounded-lg animate-move-up-down duration-[2s] "
+              className="z-40 hidden lg:inline-block lg:mt-0 ring-4 border-2 border-white ring-white/40 rounded-lg animate-move-up-down duration-[2s] "
             />
           </div>
         </main>

@@ -77,18 +77,18 @@ export default function Comment() {
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-duration="1000"
-          data-aos-delay="500"
+          data-aos-delay="1500"
           className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white"
         >
           GIVE{" "}
-          <span data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="1000" className="inline-block">
+          <span data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="2000" className="inline-block">
             YOUR
           </span>{" "}
-          <span data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="1500" className="text-secondary-dark inline-block">
+          <span data-aos="fade-left" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="2500" className="text-secondary-dark inline-block">
             COMMENTS
           </span>
         </h1>
-        <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="1000" className="flex justify-start gap-x-4 mt-10">
+        <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="3000" className="flex justify-start gap-x-4 mt-10">
           <SecondaryButton onClick={handleClick} classname="px-2 py-2">
             ADD COMMENTS
           </SecondaryButton>

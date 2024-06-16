@@ -15,10 +15,12 @@ export default function AccordionsMe() {
     <main ref={targetRef} data-aos="fade-left" data-offset="300" data-aos-duration="1400" className="lg:ml-24 w-full lg:mr-16 ">
       <Accordion>
         <Accordion.Panel>
-          <Accordion.Title className="font-open-sans focus:ring-2 font-normal text-[24px] tracking-wider bg-transparent text-tertiary-dark py-6 hover:bg-transparent">My Personality</Accordion.Title>
+          <Accordion.Title className="font-open-sans focus:ring-2 font-normal xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] tracking-wider bg-transparent text-tertiary-dark py-6 hover:bg-transparent">
+            My Personality
+          </Accordion.Title>
           <Accordion.Content className="ring-1 ring-white">
             <SplitTextAnimation
-              className="mb-2 text-white font-open-sans text-[18px] leading-line-body tracking-wide"
+              className="mb-2 text-white font-open-sans xl:text-[18px] lg:text-[17px] md:text-[16px] sm:text-[15px] text-[14px] leading-line-body tracking-wide"
               delay={0}
               targetRef={targetRef}
               text="Hello, my name is Naufal Nabil Ramadhan, i from Indonesia spesifically in East Java, Malang City. I am is one of the Programmer and Software Engineer which interest with Bussiness and Start-Ups. Therefore, programming is one
@@ -28,10 +30,12 @@ export default function AccordionsMe() {
           </Accordion.Content>
         </Accordion.Panel>
         <Accordion.Panel>
-          <Accordion.Title className="font-open-sans focus:ring-2 font-normal text-[24px] tracking-wider bg-transparent text-tertiary-dark py-6 hover:bg-transparent">School & Programming Roadmaps</Accordion.Title>
+          <Accordion.Title className="font-open-sans focus:ring-2 font-normal xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[19px] text-[18px] tracking-wider bg-transparent text-tertiary-dark py-6 hover:bg-transparent">
+            School & Programming Roadmaps
+          </Accordion.Title>
           <Accordion.Content className="ring-1 ring-white">
             <SplitTextAnimation
-              className="mb-2 text-white font-open-sans text-[18px] leading-line-body tracking-wide"
+              className="mb-2 text-white font-open-sans xl:text-[18px] lg:text-[17px] md:text-[16px] sm:text-[15px] text-[14px] leading-line-body tracking-wide"
               targetRef={targetRef}
               delay={0}
               text="I started my journey and my education about programming in MTsN 1 Malang City. In there, i always make use my free times in the class for learn programming skills. I also follow some organization to hone my hardskills for
@@ -42,10 +46,12 @@ export default function AccordionsMe() {
           </Accordion.Content>
         </Accordion.Panel>
         <Accordion.Panel>
-          <Accordion.Title className="font-open-sans focus:ring-2 font-normal text-[24px] tracking-wider bg-transparent text-tertiary-dark py-6 hover:bg-transparent">Professional Experience</Accordion.Title>
+          <Accordion.Title className="font-open-sans focus:ring-2 font-normal xl:text-[24px] lg:text-[22px] md:text-[20px] sm:text-[18px] text-[16px] tracking-wider bg-transparent text-tertiary-dark py-6 hover:bg-transparent">
+            Professional Experience
+          </Accordion.Title>
           <Accordion.Content className="ring-1 ring-white">
             <SplitTextAnimation
-              className="mb-2 text-white font-open-sans text-[18px] leading-line-body tracking-wide"
+              className="mb-2 text-white font-open-sans xl:text-[18px] lg:text-[17px] md:text-[16px] sm:text-[15px] text-[14px] leading-line-body tracking-wide"
               targetRef={targetRef}
               delay={0}
               text="I'm a programmer spesifically in web designer and web development. I started working on some projects in SMK Telkom Malang. Starting from Portfolio Website, Health website, CRUD, and many more. I also use github for
