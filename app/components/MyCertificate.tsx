@@ -75,7 +75,7 @@ export default function MyCertificate() {
   ];
   return (
     <InitialAOSClient>
-      <MouseBackground />
+      {/* <MouseBackground /> */}
 
       <main id="certificate" className="bg-primary-dark/5 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative selection:bg-slate-900">
         <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">

@@ -36,7 +36,7 @@ export default function Services() {
 
   return (
     <InitialAOSClient>
-      <MouseBackground />
+      {/* <MouseBackground /> */}
       <main id="services" className="bg-primary-dark/5 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative ">
         <h1
           data-aos="fade-left"

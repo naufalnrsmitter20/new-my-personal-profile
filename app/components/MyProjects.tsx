@@ -66,7 +66,7 @@ export default function MyProjects() {
 
   return (
     <InitialAOSClient>
-      <MouseBackground />
+      {/* <MouseBackground /> */}
       <main id="project" className="bg-primary-dark/5 selection:bg-slate-900 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
         <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
           MY <span className="text-secondary-dark">PROJECTS</span>
