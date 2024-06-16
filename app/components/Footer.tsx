@@ -1,6 +1,6 @@
 import { Footer } from "flowbite-react";
 import React from "react";
-import logo from "@/public/img/DevNavPreneur.png";
+import logo from "@/public/svg/Logo DevN Naufalnr.svg";
 import Image from "next/image";
 import InitialAOSClient from "./utilities/InitialAOSClient";
 
