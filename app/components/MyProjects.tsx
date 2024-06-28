@@ -96,7 +96,7 @@ export default function MyProjects() {
                   key={i}
                   data-aos="fade-left"
                   data-aos-duration={2000}
-                  data-aos-delay={i * 500}
+                  data-aos-delay={i * 100}
                   className="bg-tertiary-dark/30 border-2 border-tertiary-dark ring-4 hover:border-secondary-dark ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 rounded-3xl z-10"
                   renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover rounded-3xl" alt="Project Image" />}
                 >
