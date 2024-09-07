@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,6 +10,16 @@ export const metadata: Metadata = {
   description: "Naufal Nabil Ramadhan",
 };
 
+const oneDay = localFont({
+  src: [
+    {
+      path: "../public/fonts/ONEDAY.ttf",
+      style: "normal",
+    },
+  ],
+  variable: "--font-oneday",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${oneDay.variable}`}>{children}</body>
     </html>
   );
 }

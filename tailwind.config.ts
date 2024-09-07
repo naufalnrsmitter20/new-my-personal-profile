@@ -19,7 +19,7 @@ const config: Config = {
       },
       fontFamily: {
         platypi: "Platypi",
-        "one-day": "ONE DAY",
+        "one-day": "var(--font-oneday)",
         "open-sans": ["Open Sans", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
