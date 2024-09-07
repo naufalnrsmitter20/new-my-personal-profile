@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import myProfile from "@/public/foto2ku.jpg";
-import AccordionsMe from "./utilities/AccordionsMe";
+import myProfile from "@/public/fofogweh.png";
 import InitialAOSClient from "./utilities/InitialAOSClient";
 
 export default function AboutMe() {

@@ -7,10 +7,15 @@ import AlbumKenangan from "@/public/img/projects/album-kenangan-matsanewa.png";
 import TechnologyArticle from "@/public/img/projects/technology-article.png";
 import Adiswisata from "@/public/img/projects/adiswisata.png";
 import wastain from "@/public/img/projects/wastain.png";
+import pilketos from "@/public/img/projects/e-pilketos.png";
+import mokletorg from "@/public/img/projects/mokletorg.png";
+import telkomsociety from "@/public/img/projects/telkomsociety.png";
+import mitfest from "@/public/img/projects/mitfest.png";
+import groundedlab from "@/public/img/projects/groundedlab.png";
 import { Card } from "flowbite-react";
 import Image from "next/image";
-import MouseBackground from "./animation/MouseBackground";
 import InitialAOSClient from "./utilities/InitialAOSClient";
+import { useRouter } from "next/navigation";
 
 interface projects {
   name: string;
@@ -20,6 +25,7 @@ interface projects {
 }
 
 export default function MyProjects() {
+  const router = useRouter();
   const dataProject: projects[] = [
     {
       name: "Bootstrap Portfolio",
@@ -56,6 +62,36 @@ export default function MyProjects() {
       imageUrl: wastain,
       type: "Website",
       href: "https://wastain.vercel.app/",
+    },
+    {
+      name: "E - Pilketos",
+      imageUrl: pilketos,
+      type: "Website",
+      href: "https://e-pilketos-moklet.vercel.app/",
+    },
+    {
+      name: "Moklet.org",
+      imageUrl: mokletorg,
+      type: "Website",
+      href: "https://moklet.org/",
+    },
+    {
+      name: "Telkom Society",
+      imageUrl: telkomsociety,
+      type: "Website",
+      href: "https://telkom-society.vercel.app/",
+    },
+    {
+      name: "GroundedLab Portfolio",
+      imageUrl: groundedlab,
+      type: "Website",
+      href: "go.moklet.org/GroundedLab",
+    },
+    {
+      name: "Mitfest Web",
+      imageUrl: mitfest,
+      type: "Website",
+      href: "https://mitfest-dev.vercel.app",
     },
   ];
   const [selected, setSelected] = useState("All");
@@ -94,11 +130,12 @@ export default function MyProjects() {
               {filteredProjects.map((projects, i) => (
                 <Card
                   key={i}
+                  onClick={() => window.open(projects.href)}
                   data-aos="fade-left"
                   data-aos-duration={2000}
                   data-aos-delay={i * 100}
-                  className="bg-tertiary-dark/30 border-2 border-tertiary-dark ring-4 hover:border-secondary-dark ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 rounded-3xl z-10"
-                  renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover rounded-3xl" alt="Project Image" />}
+                  className="bg-tertiary-dark/30 border-2 cursor-pointer border-tertiary-dark ring-4 hover:border-secondary-dark overflow-hidden ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 rounded-3xl z-10"
+                  renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover" alt="Project Image" />}
                 >
                   <div className="flex-wrap flex justify-between">
                     <a href={projects.href} target="_blank">

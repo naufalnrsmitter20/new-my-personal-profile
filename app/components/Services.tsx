@@ -22,8 +22,8 @@ export default function Services() {
       Icons: <WebDevelopment />,
     },
     {
-      titles: "Wireframe & Product Flow",
-      desc: "Menyediakan Layanan Desain sistem Aplikasi berbasis website dengan kelengkapan komponen seperti FlowChart, Database Schema & ERD, Struktur Manajemen user & admin, UX Design, sampai pada wireframe.",
+      titles: "Web Development",
+      desc: "Menyediakan Layanan Pembuatan Web Statis dan Web Dinamis. Mulai dari E-Commerce, Pilketos, Event, dan lain lain.",
       Icons: <WireframeProductFlow />,
     },
     {
@@ -58,7 +58,8 @@ export default function Services() {
             >
               <div className="border mix-blend-exclusion my-2 border-secondary-dark bg-any-dark w-[52px] h-[52px] rounded-md place-items-center flex mx-auto selection:bg-slate-600">{items.Icons}</div>
               <h4 className="text-center font-open-sans font-normal text-[24px] tracking-normal mb-2 mt-1 text-secondary-dark">{items.titles}</h4>
-              <SplitTextAnimation targetRef={targetRef} className="font-open-sans font-normal text-[16px] leading-relaxed text-center " delay={0} text={items.desc} type={"circ.in"} />
+              {/* <SplitTextAnimation targetRef={targetRef}  delay={0} text={items.desc} type={"circ.in"} /> */}
+              <p className="font-open-sans font-normal text-[16px] leading-relaxed text-center ">{items.desc}</p>
             </div>
           ))}
         </div>
