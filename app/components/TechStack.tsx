@@ -109,12 +109,6 @@ export default function TechStack() {
       href: "https://jquery.com/",
     },
     {
-      imageURL: sassImage,
-      title: "Sass",
-      description: "",
-      href: "https://sass-lang.com/",
-    },
-    {
       imageURL: laravelImage,
       title: "Laravel",
       description: "",
