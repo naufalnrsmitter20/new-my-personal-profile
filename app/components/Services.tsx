@@ -5,8 +5,6 @@ import WireframeProductFlow from "@/public/svg/WireframeProductFlow";
 import React, { useRef } from "react";
 import { SecondaryButton } from "./utilities/Button";
 import InitialAOSClient from "./utilities/InitialAOSClient";
-import MouseBackground from "./animation/MouseBackground";
-import SplitTextAnimation from "./animation/SplitText";
 
 interface MoreServices {
   titles: string;

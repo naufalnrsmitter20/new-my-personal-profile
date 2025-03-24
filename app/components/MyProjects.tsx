@@ -1,9 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FilteredButton } from "./utilities/Button";
-import BootstrapPortfolio from "@/public/img/projects/bootstrap-portfolio.png";
 import LansicareHealth from "@/public/img/projects/lansicare-health.png";
-import AlbumKenangan from "@/public/img/projects/album-kenangan-matsanewa.png";
 import TechnologyArticle from "@/public/img/projects/technology-article.png";
 import Adiswisata from "@/public/img/projects/adiswisata.png";
 import wastain from "@/public/img/projects/wastain.png";
@@ -12,10 +10,10 @@ import mokletorg from "@/public/img/projects/mokletorg.png";
 import telkomsociety from "@/public/img/projects/telkomsociety.png";
 import mitfest from "@/public/img/projects/mitfest.png";
 import groundedlab from "@/public/img/projects/groundedlab.png";
+import ViewInGithub from "@/public/img/projects/viewingithub.png";
 import { Card } from "flowbite-react";
 import Image from "next/image";
 import InitialAOSClient from "./utilities/InitialAOSClient";
-import { useRouter } from "next/navigation";
 
 interface projects {
   name: string;
@@ -25,25 +23,36 @@ interface projects {
 }
 
 export default function MyProjects() {
-  const router = useRouter();
   const dataProject: projects[] = [
     {
-      name: "Bootstrap Portfolio",
-      imageUrl: BootstrapPortfolio,
+      name: "Telkom Society",
+      imageUrl: telkomsociety,
       type: "Website",
-      href: "https://xnaufallnr.vercel.app/",
+      href: "https://telkom-society.smktelkom-mlg.sch.id/",
+    },
+    {
+      name: "Moklet.org",
+      imageUrl: mokletorg,
+      type: "Website",
+      href: "https://moklet.org/",
+    },
+    {
+      name: "Mitfest Web",
+      imageUrl: mitfest,
+      type: "Website",
+      href: "https://mitfest-dev.vercel.app",
+    },
+    {
+      name: "E - Pilketos",
+      imageUrl: pilketos,
+      type: "Website",
+      href: "https://e-pilketos-moklet.vercel.app/",
     },
     {
       name: "LansiCare Health Web",
       imageUrl: LansicareHealth,
       type: "Website",
       href: "https://lansicare-health.vercel.app/",
-    },
-    {
-      name: "Album Fyrtiokara",
-      imageUrl: AlbumKenangan,
-      type: "WordPress",
-      href: "https://fyrtiokara.wordpress.com/",
     },
     {
       name: "Technology Article",
@@ -63,24 +72,7 @@ export default function MyProjects() {
       type: "Website",
       href: "https://wastain.vercel.app/",
     },
-    {
-      name: "E - Pilketos",
-      imageUrl: pilketos,
-      type: "Website",
-      href: "https://e-pilketos-moklet.vercel.app/",
-    },
-    {
-      name: "Moklet.org",
-      imageUrl: mokletorg,
-      type: "Website",
-      href: "https://moklet.org/",
-    },
-    {
-      name: "Telkom Society",
-      imageUrl: telkomsociety,
-      type: "Website",
-      href: "https://telkom-society.vercel.app/",
-    },
+
     {
       name: "GroundedLab Portfolio",
       imageUrl: groundedlab,
@@ -88,10 +80,10 @@ export default function MyProjects() {
       href: "go.moklet.org/GroundedLab",
     },
     {
-      name: "Mitfest Web",
-      imageUrl: mitfest,
-      type: "Website",
-      href: "https://mitfest-dev.vercel.app",
+      name: "More? View In Github",
+      imageUrl: ViewInGithub,
+      type: "others",
+      href: "https://github.com/naufalnrsmitter20",
     },
   ];
   const [selected, setSelected] = useState("All");
@@ -116,17 +108,20 @@ export default function MyProjects() {
               <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-up">
                 <FilteredButton onClick={() => handleCategory("Website")}>Website</FilteredButton>
               </div>
-              <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-down">
+              {/* <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-down">
                 <FilteredButton onClick={() => handleCategory("UI/UX Design")}>UI/UX Design</FilteredButton>
               </div>
               <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-up">
                 <FilteredButton onClick={() => handleCategory("WordPress")}>WordPress</FilteredButton>
-              </div>
+              </div> */}
               <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-left">
                 <FilteredButton onClick={() => handleCategory("Article")}>Article</FilteredButton>
               </div>
+              <div data-aos-duration="1500" data-aos-delay="500" data-aos="fade-left">
+                <FilteredButton onClick={() => handleCategory("others")}>Others</FilteredButton>
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-16 max-w-fit mx-auto ">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-16 max-w-fit mx-auto">
               {filteredProjects.map((projects, i) => (
                 <Card
                   key={i}
@@ -134,7 +129,7 @@ export default function MyProjects() {
                   data-aos="fade-left"
                   data-aos-duration={2000}
                   data-aos-delay={i * 100}
-                  className="bg-tertiary-dark/30 border-2 cursor-pointer border-tertiary-dark ring-4 hover:border-secondary-dark overflow-hidden ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 rounded-3xl z-10"
+                  className="bg-tertiary-dark/30 border-2 rounded-lg cursor-pointer border-tertiary-dark ring-4 hover:border-secondary-dark overflow-hidden ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 z-10"
                   renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover" alt="Project Image" />}
                 >
                   <div className="flex-wrap flex justify-between">

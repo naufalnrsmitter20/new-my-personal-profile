@@ -9,7 +9,7 @@ import React, { useEffect, useRef } from "react";
 import { SecondaryButton } from "./utilities/Button";
 import Link from "next/link";
 import Image from "next/image";
-import naufal from "@/public/img/my-photos.png";
+import naufal from "@/public/img/my_profile.jpg";
 import DiscordIcon from "@/public/svg/DiscordIcon";
 
 import { ReactTyped } from "react-typed";
@@ -57,9 +57,6 @@ export default function Jumbotron() {
   return (
     <InitialAOSClient>
       <main id="home" className="relative selection:bg-slate-900">
-        <video className="w-full h-full absolute top-0 left-0 object-cover lg:h-screen" preload="none" autoPlay loop muted>
-          <source src="/videos/myVideoBG.mp4" type="video/mp4" />
-        </video>
         <div className="w-full h-full absolute top-0 left-0 bg-black/50 z-10 lg:h-screen"></div>
         <main className="relative lg:flex flex-wrap-reverse lg:place-items-center w-full h-full lg:h-screen justify-around overflow-hidden z-20">
           <div className="max-w-xl mx-12 lg:mx-0 mb-16 lg:mt-0">
@@ -124,7 +121,7 @@ export default function Jumbotron() {
               data-aos-duration="1000"
               src={naufal}
               alt="my Photos"
-              className="z-40 hidden lg:inline-block lg:mt-0 ring-4 border-2 border-white ring-white/40 rounded-lg animate-move-up-down duration-[2s] "
+              className="z-40 w-72 h-auto hidden lg:inline-block lg:mt-0 ring-4 border-2 border-white ring-white/40 rounded-lg animate-move-up-down duration-[2s] "
             />
           </div>
         </main>
