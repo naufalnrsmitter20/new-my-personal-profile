@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Fullstack Developer | Software Engineer | General Manager of MokletDev",
   description: "Situs pribadi Naufal Nabil Ramadhan - General Manager MokletDev & Fullstack Developer. Lihat proyek, portofolio, dan artikel seputar web development dan teknologi.",
   openGraph: {
-    title: "Naufal Nabil Ramadhan - Web Developer & General Manager MokletDev",
+    title: "Naufal Nabil Ramadhan - Fullstack Developer | Software Engineer | General Manager of MokletDev",
     description: "General Manager MokletDev dan Fullstack Developer. Lihat karya dan kontribusi saya di bidang teknologi.",
     url: "https://naufalnr.my.moklet.org/",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naufal Nabil Ramadhan - Web Developer & General Manager MokletDev",
+    title: "Naufal Nabil Ramadhan - Fullstack Developer | Software Engineer | General Manager of MokletDev",
     description: "General Manager MokletDev dan Fullstack Developer. Lihat karya dan kontribusi saya di bidang teknologi.",
     images: ["https://naufalnr.my.moklet.org/og-image.png"],
   },
