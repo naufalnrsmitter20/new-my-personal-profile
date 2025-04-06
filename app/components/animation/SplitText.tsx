@@ -17,6 +17,7 @@ const SplitTextAnimation: React.FC<SplitTextAnimationProps> = ({ text, className
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          7;
           // Jika elemen masuk ke dalam view port
           if (textRef.current) {
             const chars = textRef.current.querySelectorAll(".char");
