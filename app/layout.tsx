@@ -6,8 +6,8 @@ import localFont from "next/font/local";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fullstack Developer | Software Engineer | General Manager of MokletDev",
-  description: "Situs pribadi Naufal Nabil Ramadhan - General Manager MokletDev & Fullstack Developer. Lihat proyek, portofolio, dan artikel seputar web development dan teknologi.",
+  title: "Naufalnr Portfolio | Personal Website",
+  description: "Situs pribadi Naufal Nabil Ramadhan - Fullstack Developer | Software Engineer | General Manager of MokletDev. Lihat proyek, portofolio, dan artikel seputar web development dan teknologi.",
   openGraph: {
     title: "Naufal Nabil Ramadhan - Fullstack Developer | Software Engineer | General Manager of MokletDev",
     description: "Fullstack Developer dan Software Engineer. Lihat karya dan kontribusi saya di bidang teknologi.",
