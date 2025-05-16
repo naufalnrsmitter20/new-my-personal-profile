@@ -56,7 +56,7 @@ export default function Jumbotron() {
 
   return (
     <InitialAOSClient>
-      <main id="home" className="relative selection:bg-slate-900">
+      <main id="home" className="relative selection:bg-slate-300">
         <div className="w-full h-full absolute top-0 left-0 bg-black/50 z-10 lg:h-screen"></div>
         <main className="relative lg:flex flex-wrap-reverse lg:place-items-center w-full h-full lg:h-screen justify-around overflow-hidden z-20">
           <div className="max-w-xl mx-12 lg:mx-0 mb-16 lg:mt-0">

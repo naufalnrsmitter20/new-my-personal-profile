@@ -16,17 +16,17 @@ export default function Services() {
   const CompServices: MoreServices[] = [
     {
       titles: "Web Design",
-      desc: "Menyediakan Layanan Pembuatan Desain website. Mulai dari Portfolio, Company Profile, Web Survey dan lain lain. Website yang kami buat dijamin berkualitas bagus, responsive, dan dinamis.",
+      desc: "We provide high-quality, responsive, and customizable website designs for portfolios, company profiles, surveys, and more, combining visual appeal with smooth and functional user experience.",
       Icons: <WebDevelopment />,
     },
     {
       titles: "Web Development",
-      desc: "Menyediakan Layanan Pembuatan Web Statis dan Web Dinamis. Mulai dari E-Commerce, Pilketos, Event, dan lain lain.",
+      desc: "We offer development services for both static and dynamic websites tailored to your needs including e-commerce platforms, student council elections, administrations web, event websites, and many more.",
       Icons: <WireframeProductFlow />,
     },
     {
-      titles: "UI/UX Design",
-      desc: "Menyediakan Layanan untuk desain UI/UX Aplikasi berbasis website mulai dari pembuatan struktur sistem, wireframe, style guide, mockup hingga prototype yang diinginkan.",
+      titles: "Project Management",
+      desc: "We offer IT project management services to help ensure your projects run smoothly, on time, and within budget. From planning and coordination to progress tracking and risk handling, we deliver structured workflows and clear communication for successful results.",
       Icons: <UIUXDesign />,
     },
   ];
@@ -35,7 +35,7 @@ export default function Services() {
   return (
     <InitialAOSClient>
       {/* <MouseBackground /> */}
-      <main id="services" className="bg-primary-dark/5 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative ">
+      <main id="services" className="bg-primary-dark/5 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative selection:bg-slate-300 ">
         <h1
           data-aos="fade-left"
           data-aos-offset="100"
@@ -57,7 +57,7 @@ export default function Services() {
               <div className="border mix-blend-exclusion my-2 border-secondary-dark bg-any-dark w-[52px] h-[52px] rounded-md place-items-center flex mx-auto selection:bg-slate-600">{items.Icons}</div>
               <h4 className="text-center font-open-sans font-normal text-[24px] tracking-normal mb-2 mt-1 text-secondary-dark">{items.titles}</h4>
               {/* <SplitTextAnimation targetRef={targetRef}  delay={0} text={items.desc} type={"circ.in"} /> */}
-              <p className="font-open-sans font-normal text-[16px] leading-relaxed text-center ">{items.desc}</p>
+              <p className="font-open-sans font-normal text-[16px] leading-relaxed text-justify">{items.desc}</p>
             </div>
           ))}
         </div>
