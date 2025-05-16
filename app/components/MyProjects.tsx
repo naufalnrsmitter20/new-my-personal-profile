@@ -10,6 +10,8 @@ import mokletorg from "@/public/img/projects/mokletorg.png";
 import telkomsociety from "@/public/img/projects/telkomsociety.png";
 import mitfest from "@/public/img/projects/mitfest.png";
 import groundedlab from "@/public/img/projects/groundedlab.png";
+import bebekPintar from "@/public/img/projects/bebekPintar.png";
+import mieKober from "@/public/img/projects/mieKober.png";
 import ViewInGithub from "@/public/img/projects/viewingithub.png";
 import { Card } from "flowbite-react";
 import Image from "next/image";
@@ -24,6 +26,18 @@ interface projects {
 
 export default function MyProjects() {
   const dataProject: projects[] = [
+    {
+      name: "Mie Kober",
+      imageUrl: mieKober,
+      type: "Website",
+      href: "https://kobermie.site/",
+    },
+    {
+      name: "Bebek Pintar",
+      imageUrl: bebekPintar,
+      type: "Website",
+      href: "https://www.bebekpintar.site/",
+    },
     {
       name: "Telkom Society",
       imageUrl: telkomsociety,

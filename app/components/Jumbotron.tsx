@@ -89,7 +89,7 @@ export default function Jumbotron() {
               <h6 data-aos="fade-right" data-aos-duration="1200" data-aos-delay="3000" className="text-white tracking-wider font-open-sans font-medium text-[16px] lg:text-[24px] xl:text-[28px] text-start">
                 I{"'"}m a{" "}
                 <span id="myTyped" className="text-secondary-dark">
-                  <ReactTyped strings={["Software Engineer", "Web Developer", "Entrepreneur"]} typeSpeed={80} backDelay={1000} backSpeed={100} loop />
+                  <ReactTyped strings={["Software Engineer", "Manager of MokletDev", "Web Developer", "Entrepreneur", "Project Manager"]} typeSpeed={80} backDelay={1000} backSpeed={100} loop />
                 </span>
               </h6>
             </div>
