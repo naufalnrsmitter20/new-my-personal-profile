@@ -6,10 +6,9 @@ import InitialAOSClient from "./utilities/InitialAOSClient";
 export default function AboutMe() {
   return (
     <InitialAOSClient>
-      <div className="h-full relative overflow-x-hidden">
+      <div id="about" className="h-full relative overflow-x-hidden">
         <Image width={100} unoptimized height={100} className="w-screen h-full object-cover absolute top-0 left-0 z-0" src="/img/bg1.jpg" alt="Background Image" />
-
-        <main id="about" className="bg-primary-dark/80 backdrop-blur-md shadow-md px-12 md:px-16 lg:px-24 xl:px-36 py-10 z-10">
+        <main className="bg-primary-dark/80 pt-12 backdrop-blur-md shadow-md px-12 md:px-16 lg:px-24 xl:px-36 py-10 z-10">
           <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" className="uppercase font-one-day font-normal text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] tracking-widest text-secondary-dark">
             ABOUT <span className="text-white">ME</span>
           </h1>

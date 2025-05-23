@@ -17,6 +17,8 @@ import { Card } from "flowbite-react";
 import Image from "next/image";
 import InitialAOSClient from "./utilities/InitialAOSClient";
 import { P } from "./utilities/Text";
+import Link from "next/link";
+import { ExternalLink, LinkIcon } from "lucide-react";
 
 interface projects {
   name: string;
@@ -132,22 +134,30 @@ export default function MyProjects() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-16 max-w-fit mx-auto">
               {filteredProjects.map((projects, i) => (
-                <Card
+                <div
                   key={i}
                   onClick={() => window.open(projects.href)}
                   data-aos="fade-left"
                   data-aos-duration={1000}
                   data-aos-delay={i * 100}
-                  className="bg-tertiary-dark/30 border-2 rounded-lg cursor-pointer border-tertiary-dark ring-4 hover:border-secondary-dark overflow-hidden ring-tertiary-dark/40 hover:ring-secondary-dark/40 hover:border-spacing-8 z-10"
-                  renderImage={() => <Image width={415} height={205} src={projects.imageUrl} className="object-cover" alt="Project Image" />}
+                  className="group bg-primary-dark/30 border-2 rounded-lg relative cursor-pointer border-secondary-dark ring-4 hover:border-white overflow-hidden ring-secondary-dark/40 hover:ring-white/40 hover:border-spacing-8 z-10"
                 >
-                  <div className="flex-wrap flex justify-between">
-                    <a href={projects.href} target="_blank">
-                      <P className="hover:text-secondary-dark font-[500] tracking-wide group text-white">{projects.name}</P>
-                    </a>
-                    <P className="font-[600] text-disable-slate">{projects.type}</P>
+                  <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/20 group-hover:backdrop-blur-md group-hover:bg-primary-dark/30 duration-200 z-10"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-4 bg-primary-dark rounded-full group-hover:border-2">
+                    <Link href={projects.href} target="_blank" onClick={(e) => e.stopPropagation()}>
+                      <LinkIcon className="text-white w-6 h-6" />
+                    </Link>
                   </div>
-                </Card>
+                  <Image width={415} height={205} src={projects.imageUrl} className="object-cover w-full h-52" alt="Project Image" />
+                  <div>
+                    <div className="flex-wrap flex justify-between py-4 px-6">
+                      <Link href={projects.href} target="_blank">
+                        <P className="hover:text-secondary-dark font-[500] tracking-wide group text-white">{projects.name}</P>
+                      </Link>
+                      <P className="font-[600] text-disable-slate">{projects.type}</P>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
