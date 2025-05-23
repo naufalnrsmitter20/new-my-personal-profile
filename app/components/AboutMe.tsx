@@ -1,29 +1,44 @@
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import myProfile from "@/public/fofogweh.png";
 import InitialAOSClient from "./utilities/InitialAOSClient";
 
 export default function AboutMe() {
   return (
     <InitialAOSClient>
-      <main id="about" className="bg-any-dark px-12 md:px-16 lg:px-24 xl:px-36 py-10 h-full relative overflow-x-hidden">
-        <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase font-one-day font-normal text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] tracking-widest text-tertiary-dark">
-          ABOUT <span className="text-white">ME</span>
-        </h1>
-        <div className=" lg:flex lg:justify-between gap-x-10 py-20">
-          <div className="w-full">
-            <Image data-aos="fade-right" data-aos-duration="1000" className="lg:mx-0 object-cover ring-2 ring-white rounded-md h-full w-72 max-w-lg" src={myProfile} alt="Profiles" />
+      <div className="h-full relative overflow-x-hidden">
+        <Image width={100} unoptimized height={100} className="w-screen h-full object-cover absolute top-0 left-0 z-0" src="/img/bg1.jpg" alt="Background Image" />
+
+        <main id="about" className="bg-primary-dark/80 backdrop-blur-md shadow-md px-12 md:px-16 lg:px-24 xl:px-36 py-10 z-10">
+          <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" className="uppercase font-one-day font-normal text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] tracking-widest text-secondary-dark">
+            ABOUT <span className="text-white">ME</span>
+          </h1>
+          <div className=" lg:flex lg:justify-between gap-x-10 py-20">
+            <div className="ring-2 ring-primary-dark rounded-full h-72 w-full max-w-lg overflow-hidden relative">
+              <div className="bg-primary-dark/20 w-full h-full absolute top-0 left-0"></div>
+              <Image data-aos="fade-right" data-aos-duration="500" className="lg:mx-0 object-cover w-full h-full" src={myProfile} alt="Profiles" />
+            </div>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="500"
+              data-aos-delay="200"
+              className="xl:text-[20px] lg:text-[19px] md:text-[18px] sm:text-[17px] text-[16px] leading-loose tracking-wider mt-6 lg:mt-0 font-[400] content-center text-white"
+            >
+              <span className="text-secondary-dark">Fullstack Developer</span> with 1+ year experience in
+              <span className="text-secondary-dark"> web application development</span>. Built a<span className="text-secondary-dark"> custom UI library</span> to boost productivity. Skilled in
+              <span className="text-secondary-dark"> project management</span> and
+              <span className="text-secondary-dark"> team leadership</span>. Proficient in
+              <span className="text-secondary-dark"> Next.js</span> and
+              <span className="text-secondary-dark"> Laravel</span>. Strong in
+              <span className="text-secondary-dark"> client communication</span>, cross-team coordination, and
+              <span className="text-secondary-dark"> strategic decision-making</span>. Familiar with
+              <span className="text-secondary-dark"> GitHub Projects</span> and
+              <span className="text-secondary-dark"> Notion</span>. Aiming to grow as an
+              <span className="text-secondary-dark"> IT Project Manager</span>.
+            </p>
           </div>
-          <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="bg-white w-4 h-auto content-center"></div>
-          {/* <AccordionsMe /> */}
-          <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" className="xl:text-[20px] lg:text-[19px] md:text-[18px] sm:text-[17px] text-[16px] leading-loose tracking-wider mt-6 lg:mt-0 content-center">
-            Experienced and results-driven Fullstack Developer with over a year of expertise in leading web application development. Designed and developed a custom UI library to enhance developer productivity and code reusability. Skilled
-            in project management, IT project management, and organizational leadership. Successfully led a development team, monitored project progress, and effectively communicated with clients to ensure seamless execution. Proficient in
-            fullstack web development, with deep expertise in Next.js and Laravel. Adept at coordinating cross-functional teams, providing progress reports to stakeholders, and making strategic decisions to drive project success. Committed
-            to delivering high-quality solutions and optimizing collaboration through tools like GitHub Projects and Notion. Eager to leverage strong leadership and technical skills to excel as an IT Project Manager.
-          </p>
-        </div>
-      </main>
+        </main>
+      </div>
     </InitialAOSClient>
   );
 }

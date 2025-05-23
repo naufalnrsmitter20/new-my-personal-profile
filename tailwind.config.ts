@@ -44,9 +44,26 @@ const config: Config = {
             transform: "translateY(0px)",
           },
         },
+        moveUpDown2: {
+          "0%": {
+            transform: "translateY(2px)",
+          },
+          "50%": {
+            transform: "translateY(-2px)",
+          },
+          "100%": {
+            transform: "translateY(2px)",
+          },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "move-up-down": "moveUpDown 2s ease-in-out infinite",
+        "move-up-down-2": "moveUpDown2 0.5s ease-in-out infinite",
+        marquee: "marquee 20s linear infinite",
       },
     },
   },

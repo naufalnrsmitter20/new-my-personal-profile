@@ -1,6 +1,5 @@
 import React from "react";
-import { Carousel } from "flowbite-react";
-// Certificate
+import { Card, Carousel } from "flowbite-react";
 import skilvulHTML from "@/public/img/certificate/Skilvul-SkilBadge-HTML Dasar_page-0001.jpg";
 import skilvulCSS from "@/public/img/certificate/Skilvul-SkilBadge-CSS Dasar_page-0001.jpg";
 import skilvulJS from "@/public/img/certificate/Skilvul-SkilBadge-JavaScript Dasar_page-0001.jpg";
@@ -74,20 +73,18 @@ export default function MyCertificate() {
   ];
   return (
     <InitialAOSClient>
-      {/* <MouseBackground /> */}
-
       <main id="certificate" className="bg-primary-dark/5 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative selection:bg-slate-300">
         <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">
           MY <span className="text-white">CERTIFICATE</span>
         </h1>
-        <div className="sm:h-80 xl:h-[580px] w-auto md:h-80 lg:h-96 xl:w-[966px] h-56 2xl:h-[684px] mx-auto mt-[93px] relative">
-          <Carousel className="max-w-sm sm:max-w-lg lg:max-w-xl group xl:max-w-6xl ring-white/40 border-2 border-white ring-2 hover:ring-8 transition-all duration-200 rounded-lg h-full" slideInterval={3000}>
+        <div className="h-full w-auto mx-auto my-[93px] relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-16 max-w-fit mx-auto">
             {certif.map((items, i) => (
-              <div key={i}>
-                <Image src={items.imageURL} width={966} height={684} alt={items.title} className="group-hover:scale-90 transition-all duration-300 rounded-md" />
+              <div className="bg-tertiary-dark/30 border-2 rounded-lg cursor-pointer border-tertiary-dark ring-4 hover:border-white overflow-hidden ring-tertiary-dark/40 hover:ring-white/40 z-10 w-full h-72" key={i}>
+                <Image src={items.imageURL} width={966} height={684} alt={items.title} className="group-hover:scale-90 w-full h-full object-cover transition-all duration-300 rounded-md" />
               </div>
             ))}
-          </Carousel>
+          </div>
         </div>
       </main>
     </InitialAOSClient>

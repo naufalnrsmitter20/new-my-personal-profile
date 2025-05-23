@@ -26,6 +26,7 @@ import { Card } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 import InitialAOSClient from "./utilities/InitialAOSClient";
+import { P } from "./utilities/Text";
 
 interface tech {
   imageURL: any;
@@ -178,7 +179,7 @@ export default function TechStack() {
   return (
     <InitialAOSClient>
       <main id="techstack" className="bg-any-dark md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
-        <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative z-10 px-12 md:px-0 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
+        <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" className="uppercase relative z-10 px-12 md:px-0 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
           TECH <span className="text-tertiary-dark">STACK</span>
         </h1>
         <div className="mt-[93px] flex flex-wrap max-w-full gap-4 mx-auto">
@@ -192,7 +193,9 @@ export default function TechStack() {
                 className="bg-transparent rounded-lg border-2 flex justify-between items-center w-full px-8 py-2 border-tertiary-dark hover:border-white hover:ring-2 hover:ring-white/40 transition-all duration-200"
               >
                 <Image width={60} height={60} className="mx-auto object-cover" src={tech.imageURL} alt="TechStack" />
-                <p className="text-lg text-white font-medium">{tech.title}</p>
+                <P weight="medium" className="text-lg text-white">
+                  {tech.title}
+                </P>
               </div>
             </Link>
           ))}

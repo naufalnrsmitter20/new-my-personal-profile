@@ -6,6 +6,7 @@ import Image from "next/image";
 import logo from "@/public/img/favicon.png";
 import { SecondaryButton } from "./utilities/Button";
 import InitialAOSClient from "./utilities/InitialAOSClient";
+import { H2, H4, P } from "./utilities/Text";
 
 interface navLink {
   title: string;
@@ -45,15 +46,15 @@ export default function Navbars() {
   return (
     <InitialAOSClient>
       <div className="h-16">
-        <Navbar className="fixed w-full bg-primary-dark block z-40 shadow shadow-white hover:shadow-secondary-dark transition-all duration-200">
+        <Navbar className="fixed w-full bg-primary-dark/50 backdrop-blur-md block z-40 shadow shadow-white hover:shadow-secondary-dark transition-all duration-200">
           <Navbar.Brand href="#" className="flex place-items-center gap-x-2">
             <Image src={logo} alt="my logo" />
-            <h2 className="font-platypi font-semibold text-[24px] tracking-wide text-secondary-dark">
-              DevN <span className="text-white">Naufalnr</span>
-            </h2>
+            <H4 weight="medium" className="text-white">
+              Naufalnr
+            </H4>
           </Navbar.Brand>
           <div className="flex md:order-2">
-            <SecondaryButton target="_blank" href={"https://wa.me/6282141341737"} classname=" hidden lg:block">
+            <SecondaryButton target="_blank" href={"https://wa.me/6282141341737"} classname="hidden lg:block">
               Contact Me
             </SecondaryButton>
             <Navbar.Toggle />
@@ -61,7 +62,7 @@ export default function Navbars() {
           <Navbar.Collapse>
             {linkComponent.map((link, i) => (
               <Navbar.Link key={i} href={link.href}>
-                <p className="font-open-sans font-medium text-[16px] leading-line-body text-white hover:text-secondary-dark transition-all duration-200">{link.title}</p>
+                <P className="text-white hover:text-secondary-dark transition-all duration-200">{link.title}</P>
               </Navbar.Link>
             ))}
           </Navbar.Collapse>

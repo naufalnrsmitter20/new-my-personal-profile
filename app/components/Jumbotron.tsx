@@ -15,6 +15,8 @@ import DiscordIcon from "@/public/svg/DiscordIcon";
 import { ReactTyped } from "react-typed";
 import SplitTextAnimation from "./animation/SplitText";
 import InitialAOSClient from "./utilities/InitialAOSClient";
+import { D1, H1, H2, H3, H4, P } from "./utilities/Text";
+import { ArrowDown } from "lucide-react";
 
 interface IIcons {
   element: JSX.Element;
@@ -58,35 +60,32 @@ export default function Jumbotron() {
     <InitialAOSClient>
       <main id="home" className="relative selection:bg-slate-300">
         <div className="w-full h-full absolute top-0 left-0 bg-black/50 z-10 lg:h-screen"></div>
-        <main className="relative lg:flex flex-wrap-reverse lg:place-items-center w-full h-full lg:h-screen justify-around overflow-hidden z-20">
+        {/* <main className="relative lg:flex flex-wrap-reverse lg:place-items-center w-full h-full lg:h-screen justify-around overflow-hidden z-20">
           <div className="max-w-xl mx-12 lg:mx-0 mb-16 lg:mt-0">
             <div>
               <Image
                 src={naufal}
                 data-aos="fade-down"
                 data-aos-easing="linear"
-                data-aos-duration="1000"
+                data-aos-duration="500"
                 alt="my Photos"
                 className="w-32 lg:hidden lg:mx-auto my-10 md:block lg:w-auto ring-4 border-2 border-white ring-white/40 rounded-lg animate-move-up-down duration-[2s]"
               />
             </div>
             <div ref={targetRef} className="mt-10 lg:text-left">
-              {/* <div className="flex-grow flex gap-x-2"> */}
-              <SplitTextAnimation targetRef={targetRef} type={"bounce.in"} delay={0} text="Hi There! My " className="text-white font-platypi font-semibold text-[18px] md:text-[28px] lg:text-[32px] xl:text-[40px] tracking-wide text-start" />
+              <SplitTextAnimation targetRef={targetRef} type={"bounce.in"} delay={0} text="Hi There,  " className="text-white font-[500] text-[18px] md:text-[28px] lg:text-[32px] xl:text-[40px] tracking-wide text-start" />
               {"  "}
-              <SplitTextAnimation targetRef={targetRef} type={"bounce.in"} delay={0.7} text="Name " className="text-secondary-dark font-platypi font-semibold text-[18px] md:text-[28px] lg:text-[32px] xl:text-[40px] tracking-wide" />
+              <SplitTextAnimation targetRef={targetRef} type={"bounce.in"} delay={0.7} text="I'am" className="text-white font-[500] text-[18px] md:text-[28px] lg:text-[32px] xl:text-[40px] tracking-wide" />
               {"  "}
-              <SplitTextAnimation targetRef={targetRef} type={"bounce.in"} delay={1.2} text="Is" className="text-white font-platypi font-semibold text-[18px] md:text-[28px] lg:text-[32px] xl:text-[40px] tracking-wide" />
-              {/* </div> */}
-              <h1 className="uppercase font-one-day font-normal text-[30px] md:text-[48px] lg:text-[56px] xl:text-[64px] tracking-widest text-white text-start">
-                <p data-aos-delay="1400" data-aos="fade-right" data-aos-duration="1200">
+              <div className="uppercase font-one-day font-[400] tracking-[0.5em] text-secondary-dark text-start">
+                <D1 data-aos-delay="1400" data-aos="fade-right" data-aos-duration="1200">
                   Naufal Nabil
-                </p>{" "}
-                <p data-aos-duration="1200" data-aos-delay="2300" data-aos="fade-left" className="text-secondary-dark">
+                </D1>{" "}
+                <D1 data-aos-duration="1200" data-aos-delay="2300" data-aos="fade-left" className="text-white">
                   Ramadhan
-                </p>
-              </h1>
-              <h6 data-aos="fade-right" data-aos-duration="1200" data-aos-delay="3000" className="text-white tracking-wider font-open-sans font-medium text-[16px] lg:text-[24px] xl:text-[28px] text-start">
+                </D1>
+              </div>
+              <h6 data-aos="fade-right" data-aos-duration="1200" data-aos-delay="3000" className="text-white tracking-wider font-[500] text-[16px] lg:text-[24px] xl:text-[28px] text-start">
                 I{"'"}m a{" "}
                 <span id="myTyped" className="text-secondary-dark">
                   <ReactTyped strings={["Software Engineer", "Manager of MokletDev", "Web Developer", "Entrepreneur", "Project Manager"]} typeSpeed={80} backDelay={1000} backSpeed={100} loop />
@@ -108,8 +107,8 @@ export default function Jumbotron() {
                 </Link>
               ))}
             </div>
-            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000" data-aos-delay="2000">
-              <SecondaryButton href="#about" classname="uppercase font-open-sans text-[10px] max-w-40 tracking-body mt-8 px-2 py-1">
+            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500" data-aos-delay="2000">
+              <SecondaryButton href="#about" classname="uppercase mt-8">
                 Explore
               </SecondaryButton>
             </div>
@@ -118,11 +117,46 @@ export default function Jumbotron() {
             <Image
               data-aos="fade-down"
               data-aos-easing="linear"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               src={naufal}
               alt="my Photos"
               className="z-40 w-72 h-auto hidden lg:inline-block lg:mt-0 ring-4 border-2 border-white ring-white/40 rounded-lg animate-move-up-down duration-[2s] "
             />
+          </div>
+        </main> */}
+        <main className="relative h-full lg:h-screen w-auto mx-auto overflow-hidden z-20 flex flex-col justify-center">
+          <div className="py-10">
+            <div className="rounded-full size-44 mx-auto overflow-hidden animate-move-up-down transition duration-[2s] border-white ring-white/40">
+              <Image src={naufal} width={200} height={200} data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" alt="my Photos" className="mx-auto md:block w-full h-full ring-4 border-2  object-cover" />
+            </div>
+            <div className="text-center mt-7" data-aos="fade-right" data-aos-delay="500" data-aos-duration="600">
+              <D1 className="font-one-day uppercase tracking-widest mx-20 font-[400] from-secondary-dark">
+                Lead with <span className="text-secondary-dark">purpose.</span> Build with <span className="text-secondary-dark">passion.</span> Inspire through <span className="text-secondary-dark">action.</span>
+              </D1>{" "}
+            </div>
+            <div className="mx-auto w-fit" data-aos="fade-left" data-aos-duration="500" data-aos-delay="1000">
+              <SecondaryButton href="#about" classname="uppercase mt-8 mb-8 flex items-center">
+                <P>Explore</P>
+                <ArrowDown size={20} className="text-secondary-dark group-hover:text-white ml-2 animate-move-up-down-2 duration-200" />
+              </SecondaryButton>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="500" className="overflow-hidden whitespace-nowrap bg-black text-white">
+              <H2 className="inline-block animate-marquee space-x-6 mt-10" weight="semibold">
+                {["Software Engineer", "Manager of MokletDev", "Full Stack Web Developer", "Entrepreneur", "Project Manager"].map((text, index) => (
+                  <span key={index} className={`${index % 2 === 0 ? "text-white" : "text-secondary-dark"} font-[500]`}>
+                    {text}
+                    {index !== 4 && <span className="text-white ml-6"> | </span>}
+                  </span>
+                ))}
+                <span className="ml-6 text-white">|</span>
+                {["Software Engineer", "Manager of MokletDev", "Full Stack Web Developer", "Entrepreneur", "Project Manager"].map((text, index) => (
+                  <span key={`second-${index}`} className={`${index % 2 === 0 ? "text-secondary-dark" : "text-white"} font-[500]`}>
+                    {text}
+                    {index !== 4 && <span className="text-white ml-6"> | </span>}
+                  </span>
+                ))}
+              </H2>
+            </div>
           </div>
         </main>
       </main>

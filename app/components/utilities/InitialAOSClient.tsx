@@ -8,6 +8,7 @@ export default function InitialAOSClient({ children }: { children: React.ReactNo
     AOS.init({
       easing: "ease-in-out-back",
       once: true,
+      duration: 500,
     });
   });
   return <React.Fragment>{children}</React.Fragment>;

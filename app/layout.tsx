@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Naufalnr Portfolio | Personal Website",
   description: "Situs pribadi Naufal Nabil Ramadhan - Fullstack Developer | Software Engineer | General Manager of MokletDev. Lihat proyek, portofolio, dan artikel seputar web development dan teknologi.",
@@ -42,6 +40,42 @@ const oneDay = localFont({
   variable: "--font-oneday",
 });
 
+const ClashDisplay = localFont({
+  src: [
+    {
+      path: "../public/fonts/ClashDisplay-Bold.otf",
+      style: "bold",
+      weight: "700",
+    },
+    {
+      path: "../public/fonts/ClashDisplay-Extralight.otf",
+      style: "extralight",
+      weight: "200",
+    },
+    {
+      path: "../public/fonts/ClashDisplay-Light.otf",
+      style: "light",
+      weight: "300",
+    },
+    {
+      path: "../public/fonts/ClashDisplay-Medium.otf",
+      style: "medium",
+      weight: "500",
+    },
+    {
+      path: "../public/fonts/ClashDisplay-Regular.otf",
+      style: "regular",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/ClashDisplay-Semibold.otf",
+      style: "semibold",
+      weight: "600",
+    },
+  ],
+  variable: "--font-clash-display",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,7 +83,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} ${oneDay.variable}`}>{children}</body>
+      <body className={`${ClashDisplay.className} ${oneDay.variable}`}>{children}</body>
     </html>
   );
 }
