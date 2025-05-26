@@ -16,10 +16,9 @@ interface ButtonProops {
 
 const custonTheme: CustomFlowbiteTheme["button"] = {
   color: {
-    primary:
-      "bg-secondary-dark border-2 font-[500] w-fit px-6 hover:border-yellow-400 border-secondary-dark hover:bg-yellow-400 text-white focus:ring-4 focus:ring-yellow-100 uppercase rounded-[6px] tracking-body transition-all duration-200",
+    primary: "bg-primary-dark border-2 font-[500] w-fit px-6 border-white hover:bg-transparent hover:ring-2 hover:ring-white/40 text-white focus:ring-4 focus:ring-white/40 uppercase rounded-[6px] tracking-body transition-all duration-200",
     secondary:
-      "bg-transparent ring-4 hover:ring-4 font-[500] w-fit px-4 hover:ring-white/40 ring-secondary-dark/40 border-secondary-dark border-2 hover:text-white hover:border-2 hover:border-white focus:bg-white focus:text-primary-dark text-secondary-dark focus:ring-4 focus:border-white focus:ring-white/75 uppercase rounded-[6px] tracking-body transition-all duration-100",
+      "bg-transparent ring-4 hover:ring-4 font-[500] w-fit px-4 hover:ring-white/40 ring-secondary-dark/40 border-secondary-dark border-2 hover:text-white hover:border-2 hover:border-white text-secondary-dark focus:ring-4 focus:border-white focus:ring-white/75 uppercase rounded-[6px] tracking-body transition-all duration-100",
     tertiary:
       "bg-tertiary-dark border-2 font-[500] w-fit px-6 hover:border-indigo-800 border-tertiary-dark hover:bg-indigo-800 text-white focus:ring-4 focus:ring-indigo-700 uppercase rounded-[6px] tracking-body transition-all duration-200",
     fourty:
@@ -29,9 +28,9 @@ const custonTheme: CustomFlowbiteTheme["button"] = {
   },
 };
 
-export function PrimaryButton({ href, children, classname, target }: ButtonProops) {
+export function PrimaryButton({ href, children, classname, target, onClick }: ButtonProops) {
   return (
-    <Button theme={custonTheme} href={href} target={target} color="primary" className={classname}>
+    <Button theme={custonTheme} href={href} target={target} onClick={onClick} color="primary" className={classname}>
       {children}
     </Button>
   );
@@ -60,7 +59,7 @@ export function FourtyButton({ href, children, classname, target, type }: Button
 }
 export function FilteredButton({ href, children, classname, target, onClick }: ButtonProops) {
   return (
-    <Button theme={custonTheme} href={href} target={target} color="filtered" onClick={onClick} className={classname}>
+    <Button theme={custonTheme} href={href} target={target} color="secondary" onClick={onClick} className={classname}>
       <P className="items-center flex justify-center">{children}</P>
     </Button>
   );

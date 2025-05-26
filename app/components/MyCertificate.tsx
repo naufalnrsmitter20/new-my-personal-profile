@@ -1,17 +1,17 @@
 import React from "react";
 import { Card, Carousel } from "flowbite-react";
-import skilvulHTML from "@/public/img/certificate/Skilvul-SkilBadge-HTML Dasar_page-0001.jpg";
-import skilvulCSS from "@/public/img/certificate/Skilvul-SkilBadge-CSS Dasar_page-0001.jpg";
-import skilvulJS from "@/public/img/certificate/Skilvul-SkilBadge-JavaScript Dasar_page-0001.jpg";
-import skilvulWeb from "@/public/img/certificate/Skilvul-SkilBadge-Web Development Pemula - Special Challenge_page-0001.jpg";
-import sertifSkilvul from "@/public/img/certificate/SERTIFIKAT PENGHARGAAN (1)_page-0002.jpg";
-import top10Skilvul from "@/public/img/certificate/SERTIFIKAT PENGHARGAAN (1)_page-0004.jpg";
-import bPlan1 from "@/public/img/certificate/Bussiness Plan - Naufal Nabil Ramadhan_page-0001.jpg";
-import bionix from "@/public/img/certificate/SERTIFIKAT-BIONIX.jpg";
-import telUCopyWriting from "@/public/img/certificate/Naufal Nabil Ramadhan TelU_page-0001.jpg";
-import webDesign from "@/public/img/certificate/Naufal Nabil Ramadhan_page-0001.jpg";
-import webinar1 from "@/public/img/certificate/Sertifikat Webinar -Naufal-Nabil-Ramadhan.jpg";
-import OSISMts from "@/public/img/certificate/SKMBT_C28023080613030_page-0001.jpg";
+import skilvulHTML from "@/public/img/certificate/Skilvul-SkilBadge-HTML Dasar_page-0001.webp";
+import skilvulCSS from "@/public/img/certificate/Skilvul-SkilBadge-CSS Dasar_page-0001.webp";
+import skilvulJS from "@/public/img/certificate/Skilvul-SkilBadge-JavaScript Dasar_page-0001.webp";
+import skilvulWeb from "@/public/img/certificate/Skilvul-SkilBadge-Web Development Pemula - Special Challenge_page-0001.webp";
+import sertifSkilvul from "@/public/img/certificate/SERTIFIKAT PENGHARGAAN (1)_page-0002.webp";
+import top10Skilvul from "@/public/img/certificate/SERTIFIKAT PENGHARGAAN (1)_page-0004.webp";
+import bPlan1 from "@/public/img/certificate/Bussiness Plan - Naufal Nabil Ramadhan_page-0001.webp";
+import bionix from "@/public/img/certificate/SERTIFIKAT-BIONIX.webp";
+import telUCopyWriting from "@/public/img/certificate/Naufal Nabil Ramadhan TelU_page-0001.webp";
+import webDesign from "@/public/img/certificate/Naufal Nabil Ramadhan_page-0001.webp";
+import webinar1 from "@/public/img/certificate/Sertifikat Webinar -Naufal-Nabil-Ramadhan.webp";
+import OSISMts from "@/public/img/certificate/SKMBT_C28023080613030_page-0001.webp";
 import Image from "next/image";
 import InitialAOSClient from "./utilities/InitialAOSClient";
 
@@ -74,7 +74,12 @@ export default function MyCertificate() {
   return (
     <InitialAOSClient>
       <main id="certificate" className="bg-primary-dark/5 px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative selection:bg-slate-300">
-        <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="600" className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">
+        <h1
+          data-aos="fade-left"
+          data-aos-offset="100"
+          data-aos-duration="600"
+          className="uppercase text-center relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark"
+        >
           MY <span className="text-white">CERTIFICATE</span>
         </h1>
         <div className="h-full w-auto mx-auto my-[93px] relative">

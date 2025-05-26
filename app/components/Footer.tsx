@@ -1,6 +1,6 @@
 import { Footer } from "flowbite-react";
 import React from "react";
-import logo from "@/public/svg/Logo DevN Naufalnr.svg";
+import logo from "@/public/img/favicon.png";
 import Image from "next/image";
 import InitialAOSClient from "./utilities/InitialAOSClient";
 
@@ -37,27 +37,27 @@ export default function Footers() {
   ];
   return (
     <InitialAOSClient>
-      <Footer container className="relative bottom-0 bg-any-dark">
+      <Footer container className="relative bottom-0 bg-primary-dark">
         <div className="w-full max-w-full lg:px-28 mx-auto mt-5 mb-16">
           <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
             <div>
-              <Image src={logo} alt="Logo" />
+              <Image unoptimized src={logo} alt="Logo" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 mt-10 sm:mt-4 gap-x-44">
               <div className="">
-                <Footer.Title title="Build With" className="font-platypi text-[24px] font-medium capitalize text-white" />
+                <Footer.Title title="Build With" className="text-[24px] font-medium capitalize text-white" />
                 {builder.map((build, i) => (
                   <Footer.LinkGroup key={i} col>
-                    <Footer.Link target="_blank" className="text-white font-open-sans font-medium text-[16px] leading-line-body py-1.5 hover:text-secondary-dark transition-all duration-200" href={build.href}>
+                    <Footer.Link target="_blank" className="text-white font-medium text-[16px] leading-line-body py-1.5 hover:text-secondary-dark transition-all duration-200" href={build.href}>
                       {build.tools}
                     </Footer.Link>
                   </Footer.LinkGroup>
                 ))}
               </div>
               <div>
-                <Footer.Title title="Legal" className="font-platypi text-[24px] font-medium capitalize text-white mt-10 md:mt-0" />
+                <Footer.Title title="Legal" className=" text-[24px] font-medium capitalize text-white mt-10 md:mt-0" />
                 <Footer.LinkGroup col>
-                  <Footer.Link href="#" className="text-white font-open-sans font-medium text-[16px] leading-line-body py-1.5 hover:text-secondary-dark transition-all duration-200">
+                  <Footer.Link href="#" className="text-white font-medium text-[16px] leading-line-body py-1.5 hover:text-secondary-dark transition-all duration-200">
                     Privacy Policy
                   </Footer.Link>
                 </Footer.LinkGroup>

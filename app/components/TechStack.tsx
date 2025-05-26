@@ -178,29 +178,32 @@ export default function TechStack() {
   ];
   return (
     <InitialAOSClient>
-      <main id="techstack" className="bg-any-dark md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
-        <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" className="uppercase relative z-10 px-12 md:px-0 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
-          TECH <span className="text-tertiary-dark">STACK</span>
-        </h1>
-        <div className="mt-[93px] flex flex-wrap max-w-full gap-4 mx-auto">
-          {techStacks.map((tech, i) => (
-            <Link key={i} target="_blank" href={tech.href}>
-              <div
-                data-aos="fade-left"
-                data-aos-offset={100}
-                data-aos-duration={1500}
-                data-aos-delay={i * 100}
-                className="bg-transparent rounded-lg border-2 flex justify-between items-center w-full px-8 py-2 border-tertiary-dark hover:border-white hover:ring-2 hover:ring-white/40 transition-all duration-200"
-              >
-                <Image width={60} height={60} className="mx-auto object-cover" src={tech.imageURL} alt="TechStack" />
-                <P weight="medium" className="text-lg text-white">
-                  {tech.title}
-                </P>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </main>
+      <div id="techstack" className="h-full relative overflow-x-hidden">
+        <Image width={100} unoptimized height={100} className="w-screen h-full object-cover absolute top-0 left-0 z-0" src="/img/bg-programming-2.webp" alt="Background Image" />
+        <main className="bg-primary-dark/60 backdrop-blur-md shadow-md md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
+          <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" className="uppercase relative z-10 px-12 md:px-0 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
+            TECH <span className="text-secondary-dark">STACK</span>
+          </h1>
+          <div className="mt-[93px] flex flex-wrap max-w-full gap-4 mx-auto">
+            {techStacks.map((tech, i) => (
+              <Link key={i} target="_blank" href={tech.href}>
+                <div
+                  data-aos="fade-left"
+                  data-aos-offset={100}
+                  data-aos-duration={1500}
+                  data-aos-delay={i * 100}
+                  className="bg-transparent rounded-lg border-2 flex justify-between items-center w-full px-8 py-2 border-white hover:border-secondary-dark hover:ring-2 hover:ring-secondary-dark/40 transition-all duration-200"
+                >
+                  <Image width={60} height={60} className="mx-auto object-cover" src={tech.imageURL} alt="TechStack" />
+                  <P weight="medium" className="text-lg text-white">
+                    {tech.title}
+                  </P>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </main>
+      </div>
     </InitialAOSClient>
   );
 }
