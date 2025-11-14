@@ -35,6 +35,12 @@ export default function MyProjects() {
       href: "https://senara.vercel.app/",
     },
     {
+      name: "SMK Telkom Malang",
+      imageUrl: "/img/projects/smktelkom.png",
+      type: "Website",
+      href: "https://smktelkom-mlg.vercel.app/",
+    },
+    {
       name: "Mie Kober",
       imageUrl: mieKober,
       type: "Website",
