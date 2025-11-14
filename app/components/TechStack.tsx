@@ -20,9 +20,7 @@ import laravelImage from "@/public/img/techstack/Brand=laravel, Style=Dark.svg";
 import analitycsImage from "@/public/img/techstack/Brand=analytics, Style=Dark.svg";
 import materialUIImage from "@/public/img/techstack/Brand=material-ui, Style=Dark.svg";
 import NPMImage from "@/public/img/techstack/Brand=npm, Style=Dark.svg";
-import AIImage from "@/public/img/techstack/Brand=ai, Style=Dark.svg";
 import githubImage from "@/public/img/techstack/Brand=github, Style=Dark.svg";
-import { Card } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 import InitialAOSClient from "./utilities/InitialAOSClient";
@@ -36,7 +34,7 @@ interface tech {
 }
 
 export default function TechStack() {
-  const techStacks: tech[] = [
+  const techStacks1: tech[] = [
     {
       imageURL: htmlImage,
       title: "HTML",
@@ -152,12 +150,6 @@ export default function TechStack() {
       href: "https://www.npmjs.com/",
     },
     {
-      imageURL: AIImage,
-      title: "Addobe Illustrator",
-      description: "",
-      href: "https://www.adobe.com/id_en/products/illustrator/campaign/pricing.html?gclid=Cj0KCQiAlbW-BhCMARIsADnwasryFS-SxDv8EUHFaN5iusomIz2km78PyBVa7rWJkJm7_Iv0L5nu_q4aApXcEALw_wcB&sdid=QQ42P3HM&mv=search&mv2=paidsearch&ef_id=Cj0KCQiAlbW-BhCMARIsADnwasryFS-SxDv8EUHFaN5iusomIz2km78PyBVa7rWJkJm7_Iv0L5nu_q4aApXcEALw_wcB:G:s&s_kwcid=AL!3085!3!637190184477!e!!g!!adobe%20illustrator!11350284429!111298123836&gad_source=1",
-    },
-    {
       imageURL: githubImage,
       title: "Github",
       description: "",
@@ -176,16 +168,72 @@ export default function TechStack() {
       href: "https://www.php.net/",
     },
   ];
+  const techStacks2: tech[] = [
+    {
+      imageURL: "img/techstack/openai.svg",
+      title: "OpenAI",
+      description: "",
+      href: "https://www.openai.com/",
+    },
+    {
+      imageURL: "img/techstack/slack.svg",
+      title: "Slack",
+      description: "",
+      href: "https://slack.com/",
+    },
+    {
+      imageURL: "img/techstack/postgresql.svg",
+      title: "PostgreSQL",
+      description: "",
+      href: "https://www.postgresql.org/",
+    },
+    {
+      imageURL: "img/techstack/postman.svg",
+      title: "Postman",
+      description: "",
+      href: "https://www.postman.com/",
+    },
+    {
+      imageURL: "img/techstack/vscode.svg",
+      title: "VSCode",
+      description: "",
+      href: "https://code.visualstudio.com/",
+    },
+    {
+      imageURL: "img/techstack/netlify.svg",
+      title: "Netlify",
+      description: "",
+      href: "https://www.netlify.com/",
+    },
+    {
+      imageURL: "img/techstack/google.svg",
+      title: "Google",
+      description: "",
+      href: "https://www.google.com/",
+    },
+    {
+      imageURL: "img/techstack/notion.svg",
+      title: "Notion",
+      description: "",
+      href: "https://www.notion.so/",
+    },
+    {
+      imageURL: "img/techstack/prisma.svg",
+      title: "Prisma",
+      description: "",
+      href: "https://www.prisma.io/",
+    },
+  ];
   return (
     <InitialAOSClient>
       <div id="techstack" className="h-full relative overflow-x-hidden">
         <Image width={100} unoptimized height={100} className="w-screen h-full object-cover absolute top-0 left-0 z-0" src="/img/bg-programming-2.webp" alt="Background Image" />
-        <main className="bg-primary-dark/60 backdrop-blur-md shadow-md md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
+        <main className="bg-primary-dark/80 backdrop-blur-md shadow-md md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full relative">
           <h1 data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" className="uppercase relative z-10 px-12 md:px-0 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-white">
             TECH <span className="text-secondary-dark">STACK</span>
           </h1>
           <div className="mt-[93px] flex flex-wrap max-w-full gap-4 mx-auto">
-            {techStacks.map((tech, i) => (
+            {techStacks1.map((tech, i) => (
               <Link key={i} target="_blank" href={tech.href}>
                 <div
                   data-aos="fade-left"
@@ -194,8 +242,24 @@ export default function TechStack() {
                   data-aos-delay={i * 100}
                   className="bg-transparent rounded-lg border-2 flex justify-between items-center w-full px-8 py-2 border-white hover:border-secondary-dark hover:ring-2 hover:ring-secondary-dark/40 transition-all duration-200"
                 >
-                  <Image width={60} height={60} className="mx-auto object-cover" src={tech.imageURL} alt="TechStack" />
+                  <Image width={60} height={60} className="mx-auto object-cover]" src={tech.imageURL} alt="TechStack" />
                   <P weight="medium" className="text-lg text-white">
+                    {tech.title}
+                  </P>
+                </div>
+              </Link>
+            ))}
+            {techStacks2.map((tech, i) => (
+              <Link key={i} target="_blank" href={tech.href}>
+                <div
+                  data-aos="fade-left"
+                  data-aos-offset={100}
+                  data-aos-duration={1500}
+                  data-aos-delay={i * 100}
+                  className="bg-transparent rounded-lg border-2 flex justify-between items-center w-full px-8 py-6 border-white hover:border-secondary-dark hover:ring-2 hover:ring-secondary-dark/40 transition-all duration-200"
+                >
+                  <Image width={30} height={30} className="mx-auto object-cover" src={tech.imageURL} alt="TechStack" />
+                  <P weight="medium" className="text-lg text-white ml-3">
                     {tech.title}
                   </P>
                 </div>

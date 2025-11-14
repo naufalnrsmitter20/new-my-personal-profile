@@ -25,9 +25,12 @@ export function H2({ children, className, weight }: Readonly<TextProps>) {
 }
 
 export function H3({ children, className, weight }: Readonly<TextProps>) {
-  return <h3 className={clsx(`text-[28px] leading-[140%] font-${weight ?? "normal"}`, className)}>{children}</h3>;
+  return <h3 className={clsx(`text-2xl md:text-[28px] leading-[140%] font-${weight ?? "normal"}`, className)}>{children}</h3>;
 }
 
 export function H4({ children, className, weight }: Readonly<TextProps>) {
-  return <h4 className={clsx(`text-2xl leading-[150%] font-${weight ?? "normal"}`, className)}>{children}</h4>;
+  return <h4 className={clsx(`text-xl md:text-2xl leading-[150%] font-${weight ?? "normal"}`, className)}>{children}</h4>;
+}
+export function H5({ children, className, weight }: Readonly<TextProps>) {
+  return <h4 className={clsx(`text-[18px] md:text-xl leading-[150%] font-${weight ?? "normal"}`, className)}>{children}</h4>;
 }

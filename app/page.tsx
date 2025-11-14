@@ -3,8 +3,10 @@ import LazyScroll from "./components/animation/LazyScroll";
 import SmoothScroll from "./components/animation/SmoothScroll";
 import Comment from "./components/Comment";
 import Footers from "./components/Footer";
+import Gallery from "./components/Gallery";
 import Jumbotron from "./components/Jumbotron";
 import MyCertificate from "./components/MyCertificate";
+import MyJourney from "./components/MyJourney";
 import MyProjects from "./components/MyProjects";
 import Navbars from "./components/Navbar";
 import Services from "./components/Services";
@@ -18,10 +20,12 @@ export default function Home() {
         <Navbars />
         <Jumbotron />
         <AboutMe />
+        <MyJourney />
         <MyProjects />
         <TechStack />
         <MyCertificate />
         <Comment />
+        {/* <Gallery /> */}
         <Services />
         <Footers />
       </SmoothScroll>

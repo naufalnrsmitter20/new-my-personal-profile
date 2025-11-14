@@ -68,7 +68,7 @@ export default function Comment() {
     <InitialAOSClient>
       <div id="comments" className="h-full relative overflow-x-hidden">
         <Image width={100} unoptimized height={100} className="w-full h-full object-cover absolute top-0 left-0 z-0" src="/img/bg-3.webp" alt="Background Image" />
-        <main className="bg-primary-dark/60 backdrop-blur-md shadow-md px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full z-20 relative">
+        <main className="bg-primary-dark/80 backdrop-blur-md shadow-md px-12 md:px-16 lg:px-24 xl:px-36 pt-14 pb-40 h-full z-20 relative">
           <H1 data-aos="fade-right" data-aos-duration="500" className="uppercase relative z-10 font-one-day text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-normal tracking-widest text-secondary-dark">
             INTEREST{" "}
             <span data-aos="fade-down" data-aos-duration="500" data-aos-delay="500" className="inline-block text-white">
@@ -97,7 +97,7 @@ export default function Comment() {
       </div>
       {isVisible && (
         <>
-          <div className="fixed inset-0 z-50 flex justify-center items-center bg-primary-dark/50 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex justify-center items-center bg-primary-dark/70 backdrop-blur-md">
             <div className="relative w-full max-w-2xl mx-auto p-6 rounded-xl shadow-xl overflow-y-auto max-h-screen">
               <div className="relative bg-primary-dark rounded-lg shadow pb-6">
                 <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">

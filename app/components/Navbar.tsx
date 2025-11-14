@@ -23,6 +23,14 @@ export default function Navbars() {
       href: "#about",
     },
     {
+      title: "Education",
+      href: "#education",
+    },
+    {
+      title: "Experience",
+      href: "#experience",
+    },
+    {
       title: "Project",
       href: "#project",
     },
@@ -37,6 +45,10 @@ export default function Navbars() {
     {
       title: "Comments",
       href: "#comments",
+    },
+    {
+      title: "Gallery",
+      href: "#gallery",
     },
     {
       title: "Services",
