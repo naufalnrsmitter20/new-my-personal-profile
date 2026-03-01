@@ -39,6 +39,17 @@ export default function MyJourney() {
 
   const WorkExperienceData: IWorkExperienceData[] = [
     {
+      company: "DOT Indonesia",
+      ImgUrl: "/img/journey/dot-indonesia-logo.png",
+      position: [
+        {
+          position: "Associate Project Manager",
+          start_date: "Nov 2025",
+          end_date: "now",
+        },
+      ],
+    },
+    {
       company: "MokletDev",
       ImgUrl: "/img/journey/Mokletdev logo.jpeg",
       position: [
@@ -50,7 +61,7 @@ export default function MyJourney() {
         {
           position: "General Manager",
           start_date: "Agu 2024",
-          end_date: "now",
+          end_date: "Agu 2025",
         },
       ],
     },
@@ -60,8 +71,8 @@ export default function MyJourney() {
       position: [
         {
           position: "Full Stack Developer",
-          start_date: "Mai 2024",
-          end_date: "now",
+          start_date: "May 2024",
+          end_date: "May 2025",
         },
       ],
     },
@@ -70,14 +81,15 @@ export default function MyJourney() {
       ImgUrl: "/img/journey/logo mpk hd (1) 2.png",
       position: [
         {
-          position: "KOMISI I - Coordinator of Technology and Information Division",
+          position:
+            "KOMISI I - Coordinator of Technology and Information Division",
           start_date: "Okt 2023",
           end_date: "Okt 2024",
         },
         {
           position: "KOMISI II - Member of Legislative Body",
           start_date: "Okt 2024",
-          end_date: "now",
+          end_date: "oct 2025",
         },
       ],
     },
@@ -97,7 +109,9 @@ export default function MyJourney() {
           </H1>
           <div className="max-w-full mt-[93px] grid grid-cols-1 lg:grid-cols-2 selection:bg-slate-500">
             <div className="w-full">
-              <H4 className="mb-2 text-secondary-dark font-medium">Education</H4>
+              <H4 className="mb-2 text-secondary-dark font-medium">
+                Education
+              </H4>
               <ol className="relative border-s border-gray-200 dark:border-gray-700">
                 {EducationData.map((item, index) => (
                   <li key={index} className="mb-10 ms-4">
@@ -106,30 +120,48 @@ export default function MyJourney() {
                       {item.start_date} - {item.end_date}
                     </time>
                     <H3 className="font-semibold text-white">{item.title}</H3>
-                    <P className="mb-4 font-normal text-gray-400">{item.Majority}</P>
+                    <P className="mb-4 font-normal text-gray-400">
+                      {item.Majority}
+                    </P>
                   </li>
                 ))}
               </ol>
             </div>
             <div className="w-full">
-              <H4 className="mb-2 text-secondary-dark font-medium">Experience</H4>
+              <H4 className="mb-2 text-secondary-dark font-medium">
+                Experience
+              </H4>
               <ol className="relative border-s border-gray-200 ">
                 {WorkExperienceData.map((item, index) => (
-                  <li key={index} className="mb-10 ms-4 flex items-start justify-start">
+                  <li
+                    key={index}
+                    className="mb-10 ms-4 flex items-start justify-start"
+                  >
                     <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
-                    <Image width={100} height={100} src={item.ImgUrl} alt={`${item.company} logo`} className="w-10 h-10 me-4" />
+                    <Image
+                      width={100}
+                      height={100}
+                      src={item.ImgUrl}
+                      alt={`${item.company} logo`}
+                      className="w-10 h-10 me-4"
+                    />
                     <div>
                       <time className="mb-1 text-sm font-normal leading-none text-gray-400">
-                        {item.position[0].start_date} - {item.position[item.position.length - 1].end_date}
+                        {item.position[0].start_date} -{" "}
+                        {item.position[item.position.length - 1].end_date}
                       </time>
-                      <H3 className="font-semibold text-white">{item.company}</H3>
+                      <H3 className="font-semibold text-white">
+                        {item.company}
+                      </H3>
                       <div className="max-w-sm bg-secondary-dark h-1 w-4 mt-1 mb-3" />
                       {item.position.map((pos, posIndex) => (
                         <div key={posIndex}>
                           <time className="text-gray-400 text-sm font-normal leading-none">
                             {pos.start_date} - {pos.end_date}
                           </time>
-                          <H5 className="mb-4 font-semibold text-white">{pos.position}</H5>
+                          <H5 className="mb-4 font-semibold text-white">
+                            {pos.position}
+                          </H5>
                           <div className="max-w-sm bg-white h-[1px] mb-3 -mt-3 w-20" />
                         </div>
                       ))}
