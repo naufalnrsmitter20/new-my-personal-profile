@@ -17,7 +17,7 @@
     "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
     "lucide-react": "^0.511.0",
-    "next": "^14.2.26",
+    "next": "14.2.35",
     "next-sitemap": "^4.2.3",
     "next-video": "^1.0.7",
     "react": "^18",
